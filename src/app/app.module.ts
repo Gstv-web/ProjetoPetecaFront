@@ -14,7 +14,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    EntrarComponent
+    EntrarComponent,
     RodapeComponent,
     CadastrarComponent
   ],
@@ -25,4 +25,4 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
