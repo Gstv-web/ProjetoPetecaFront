@@ -25,4 +25,4 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
