@@ -5,3 +5,61 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.link-midia-social:not(:first-child){
+    margin-left: 10px;
+}
+
+.facebook {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.facebook:hover {
+    background-color: #4867AA;
+    border: 1px solid #4867AA;
+    color: #ffff;
+}
+
+.google {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.google:hover {
+    background-color: #E94235;
+    border: 1px solid #E94235;
+    color: #ffff;
+}
+
+.linkedin {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.linkedin:hover {
+    background-color: #0A66C2;
+    border: 1px solid #0A66C2;
+    color: #ffff;
+}
+
+.lista-midia-social {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
