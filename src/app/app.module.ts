@@ -9,6 +9,8 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { ContatoComponent } from './contato/contato.component';
     EntrarComponent,
     RodapeComponent,
     CadastrarComponent,
-    ContatoComponent
+    ContatoComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,

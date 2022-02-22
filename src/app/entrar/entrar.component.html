@@ -1,12 +1,10 @@
+
 <div class="container-fluid">
 
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-
-                    <h1 class="text-center mb-3">Entrar</h1>
+                    <h1 class="text-center mb-3 mt-5">Entrar</h1>
 
                     <div class="form-group">
                         <label for="usuario">Usuário</label>
@@ -18,21 +16,44 @@
                         <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
                     </div>
 
+                    <p>Esqueceu sua senha?</p>
+
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success">Entrar</button>
+                        <button type="submit" class="btn btn-success" >Entrar</button>
+                    </div>
+                    
+                    <div class="row mt-5 justify-content-center">
+                        <p>Ou entre com sua rede social!</p>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <ul class="lista-midia-social">
+                                <a class="link-midia-social" href="#">
+                                    <li class="facebook">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </li>
+                                </a>
+                                
+                                <a class="link-midia-social" href="#">
+                                    <li class="google">
+                                        <i class="fa fa-google"></i>
+                                    </li>
+                                </a>
+        
+                                <a class="link-midia-social" href="#">
+                                    <li class="linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                    </li>
+                                </a>
+                            </ul> 
+
+                        </div>  
                     </div>
 
                     <hr class="mt-5 mb-5">
 
                     <p class="text-center">
-                        Não tem uma conta? 😥 <a routerLink='/cadastrar'>Cadastre-se</a>
+                        Não tem uma conta? 😥 <a routerLink="/cadastrar">Cadastre-se</a>
                     </p>
 
                 </div>
-            </div>
+            </div>       
         </div>
-
-        <!-- Coluna da Imagem -->
-        <div class="col-md-6" id="img-bg"></div>
-    </div>
-</div>
