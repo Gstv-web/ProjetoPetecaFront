@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="603" viewBox="0 0 1638 603">
+    <defs>
+        <filter id="dd3dmbkcoa" x="0" y="0" width="1638" height="603" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#dd3dmbkcoa)">
+        <rect data-name="Retângulo 152" width="1620" height="585" rx="29" transform="translate(9 6)" style="fill:#856ab4"/>
+    </g>
+</svg>
