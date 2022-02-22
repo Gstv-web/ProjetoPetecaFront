@@ -8,7 +8,9 @@ import { MenuComponent } from './menu/menu.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     EntrarComponent,
     RodapeComponent,
     CadastrarComponent,
+    ContatoComponent,
     SobreNosComponent
   ],
   imports: [
