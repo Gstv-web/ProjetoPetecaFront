@@ -1,11 +1,3 @@
-#img-bg {
-    background-image: url();
-    min-height: 935px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .link-midia-social:not(:first-child){
     margin-left: 10px;
 }
