@@ -6,6 +6,7 @@ export const environment = {
   token: "",
   senha: "",
   email: "",
-  userId: 0
+  userId: 0,
+  tipo: ""
 
 };

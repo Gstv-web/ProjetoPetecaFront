@@ -12,7 +12,7 @@ export class User {
 
   public senha:string
 
-  public tipo:number
+  public tipo:string
 
   public endereco:string
 
