@@ -1,59 +1,58 @@
-
 <div class="container-fluid">
 
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8">
 
-                    <h1 class="text-center mb-3 mt-5">Login</h1>
+            <h1 class="text-center mb-3 mt-5">Login</h1>
 
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input [(ngModel)]="credentials.email" class="form-control" type="text" name="usuario" id="usuario" placeholder="E-mail" style="border-radius: 50px">
-                    </div>
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input [(ngModel)]="credentials.email" class="form-control" type="text" name="usuario" id="usuario" placeholder="E-mail" style="border-radius: 50px">
+            </div>
 
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input [(ngModel)]="credentials.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Senha" style="border-radius: 50px">
-                    </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input [(ngModel)]="credentials.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Senha" style="border-radius: 50px">
+            </div>
 
-                    <p>Esqueceu sua senha?</p>
+            <p>Esqueceu sua senha?</p>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success" (click)="entrar()">Entrar</button>
-                    </div>
-                    
-                    <div class="row mt-5 justify-content-center">
-                        <p>Ou entre com sua rede social!</p>
-                        <div class="col-md-12 d-flex justify-content-center">
-                            <ul class="lista-midia-social">
-                                <a class="link-midia-social" href="#">
-                                    <li class="facebook">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </li>
-                                </a>
-                                
-                                <a class="link-midia-social" href="#">
-                                    <li class="google">
-                                        <i class="fa fa-google"></i>
-                                    </li>
-                                </a>
-        
-                                <a class="link-midia-social" href="#">
-                                    <li class="linkedin">
-                                        <i class="fa fa-linkedin"></i>
-                                    </li>
-                                </a>
-                            </ul> 
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success" (click)="entrar()">Entrar</button>
+            </div>
 
-                        </div>  
-                    </div>
+            <div class="row mt-5 justify-content-center">
+                <p>Ou entre com sua rede social!</p>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <ul class="lista-midia-social">
+                        <a class="link-midia-social" href="#">
+                            <li class="facebook">
+                                <i class="fa fa-facebook-f"></i>
+                            </li>
+                        </a>
 
-                    <hr class="mt-5 mb-5">
+                        <a class="link-midia-social" href="#">
+                            <li class="google">
+                                <i class="fa fa-google"></i>
+                            </li>
+                        </a>
 
-                    <p class="text-center">
-                        Não tem uma conta? 😥 <a routerLink="/cadastrar">Cadastre-se</a>
-                    </p>
+                        <a class="link-midia-social" href="#">
+                            <li class="linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </li>
+                        </a>
+                    </ul>
 
                 </div>
-            </div>       
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <p class="text-center">
+                Não tem uma conta? 😥 <a routerLink="/cadastrar">Cadastre-se</a>
+            </p>
+
         </div>
+    </div>
+</div>
