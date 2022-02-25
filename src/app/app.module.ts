@@ -8,9 +8,11 @@ import { MenuComponent } from './menu/menu.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     EntrarComponent,
     RodapeComponent,
     CadastrarComponent,
+    ContatoComponent,
     SobreNosComponent
   ],
   imports: [

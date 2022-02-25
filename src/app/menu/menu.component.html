@@ -1,52 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#conteudoNavbarSuportado"
-      aria-controls="conteudoNavbarSuportado"
-      aria-expanded="false"
-      aria-label="Alterna navegação"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
 
-    <div class="collapse navbar-collapse y-0" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        
-        <li class="nav-item active">
-          <img
-            src=""
-            alt="Logo do Peteca"
-            width="50px"
-            heigth="50px"
-            class="img-fluid rounded-circle"
+      <li class="nav-item active mr-5">
+        <img
+          src="../../assets/Logo-peteca.png"
+          alt="Logo do Peteca"
+          width="60px"
+          heigth="60px"
+          class="img-fluid rounded-circle"
           />
         </li>
-
-        <li class="nav-item pl-3">
-          <p class="m-0 font-weight-bold text-white fs-16">
-            Seja bem-vinde!
-          </p>
-        </li>
-
-        <li class="nav-item pl-3">
-          <a href="">
-            <p class="text-white fs-16 m-0">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </p>
-          </a>
-        </li>
-      </ul>
-
       
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item pl-3">
-          <a class="m-0 mr-3 font-weight-bold text-white fs-16"
-            >Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-</nav>
+      <form class="form-inline my-2 my-lg-0 ml-5">
+        <input class="form-control mr-sm-2" style="border-radius: 50px" type="search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
 
+      <div class="d-flex justify-content-right align-items-center">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#"><strong>Login</strong> <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#"><strong>Cadastro</strong> <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#"><strong>Publicar</strong> <span class="sr-only">(current)</span></a>
+        </li>
+      </div>
+
+    </ul>
+  </div>
+</nav>
