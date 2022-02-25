@@ -11,4 +11,5 @@ export class Credentials {
   public foto:string
 
   public token:string
+  
 }
