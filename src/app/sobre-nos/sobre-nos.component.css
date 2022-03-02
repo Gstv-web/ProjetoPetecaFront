@@ -1,27 +1,27 @@
-
 #corpo {
-  background-color: #FFFDF7;
+    background-color: #FFFDF7;
 }
+
 * {
-  background-color: none ;
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  font-family: "Poppins";
+    background-color: none;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Poppins";
 }
 
 #sobre-nos-area {
-  background-color: #FFFDF7;
+    background-color: #FFFDF7;
 }
 
 img.logo-peteca {
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  padding: 05%;
-  border: 05%;
-  overflow-x: 05%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 05%;
+    border: 05%;
+    overflow-x: 05%;
 }
 
 .sobre-nos-titulo {
@@ -37,9 +37,9 @@ img.logo-peteca {
     letter-spacing: normal;
     text-align: center;
     color: #000;
-  }
+}
 
-  #descricao-sobre {
+#descricao-sobre {
     width: auto;
     height: auto;
     object-fit: contain;
@@ -51,17 +51,14 @@ img.logo-peteca {
     line-height: 1.53;
     letter-spacing: normal;
     text-align: center;
-
-
     color: #000;
     padding: 05%;
     border: 05%;
     margin: 05%;
     overflow-x: 05%;
+}
 
-
-  }
-  #nosso-time-titulo {
+#nosso-time-titulo {
     background-color: #856AB4;
     width: auto;
     height: auto;
@@ -74,16 +71,31 @@ img.logo-peteca {
     letter-spacing: normal;
     text-align: center;
     color: #000;
-
-
     padding: 05%;
     border: 05%;
     margin: 05%;
     overflow-x: 05%;
+}
 
-  }
+#depoimento-titulo {
+    width: auto;
+    height: auto;
+    font-family: Poppins;
+    font-size: auto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    padding: 05%;
+    border: 05%;
+    margin: 05%;
+    overflow-x: 05%;
+}
 
-  #time-area {
+#time-area {
     background-color: #856AB4;
     justify-content: auto;
     width: auto;
@@ -97,47 +109,65 @@ img.logo-peteca {
     overflow-x: 05%;
     color: #000;
     align-items: center;
-  }
-
-element {
-  background-color: #856AB4;
-  padding: 20%;
-  border: 20%;
-  margin: 20%;
-text-align: center;
-  display: inline-block;
-  align-items: center;
-  width: auto;
-  height: auto;
-  background: transparent;
-  justify-content: center;
-  justify-self: center;
 }
+
+#depoimento-area {
+    justify-content: auto;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    font-family: Poppins;
+    line-height: 1.53;
+    letter-spacing: normal;
+    padding: 05%;
+    border: 05%;
+    overflow-x: 05%;
+    color: black;
+    align-items: center;
+}
+
 #nosso-time-titulo {
-  color: #FFFDF7;
-  font-family: Poppins;
-  font-size: 51px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  border: none;
-  padding: 05%;
+    color: #FFFDF7;
+    font-family: Poppins;
+    font-size: 51px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    border: none;
+    padding: 05%;
     border: 05%;
     overflow-x: 05%;
     align-items: center;
     justify-content: center;
     align-items: center;
-
 }
+
+
+/*
+element {
+    background-color: #856AB4;
+    padding: 20%;
+    border: 20%;
+    margin: 20%;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: transparent;
+    justify-content: center;
+    justify-self: center;
+}
+*/
+
 #descricao-element {
-text-align: justify;
-background-color: none;
-padding: 05%;
+    text-align: justify;
+    background-color: none;
+    padding: 05%;
     border: 05%;
     overflow-x: 05%;
-
     font-family: Poppins;
     font-size: 34px;
     font-weight: normal;
@@ -145,7 +175,6 @@ padding: 05%;
     font-style: normal;
     line-height: 1.53;
     letter-spacing: normal;
-
     font-family: Poppins;
     font-size: 18px;
     font-weight: normal;
@@ -158,36 +187,36 @@ padding: 05%;
 }
 
 .container-d-flex-md-3-col-3 {
-  background-color: #856AB4;
-  justify-content: center;
+    background-color: #856AB4;
+    justify-content: center;
 }
 
 #img-element {
-  display: inline-block;
-  align-items: center;
-  width: auto;
-  height: auto;
-  background: #856AB4;
-  border-radius: 70%;
-  justify-content: center;
-  justify-self: center;
-  border: none;
-  padding: auto;
-  border: auto;
-  align-items: center;
+    display: inline-block;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: #856AB4;
+    border-radius: 70%;
+    justify-content: center;
+    justify-self: center;
+    border: none;
+    padding: auto;
+    border: auto;
+    align-items: center;
 }
 
 .d-flex-justify-content-center {
-  display: inline-block;
-  align-items: center;
-  width: auto;
-  height: auto;
-  background: #856AB4;
-  border-radius: 70%;
-  justify-content: center;
-  justify-self: center;
-  border: none;
-  padding: 05%;
+    display: inline-block;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: #856AB4;
+    border-radius: 70%;
+    justify-content: center;
+    justify-self: center;
+    border: none;
+    padding: 05%;
     border: 05%;
     overflow-x: 05%;
     align-items: center;
@@ -195,11 +224,17 @@ padding: 05%;
 }
 
 #descricao-element {
-  color: #FFFDF7;
+    color: #FFFDF7;
 }
 
-h4{
-  color: #FFFDF7;
-  font: 900px;;
+#depoimento-element {
+    color: black;
+    font-family: poppins;
+    font-size: 20px;
 }
 
+h4 {
+    color: #FFFDF7;
+    font: 900px;
+    ;
+}
