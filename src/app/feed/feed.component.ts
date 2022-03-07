@@ -21,6 +21,7 @@ export class FeedComponent implements OnInit {
   user: User = new User()
 
   tipoPost: string
+  demanda: string
 
 
   constructor(
@@ -34,8 +35,9 @@ export class FeedComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
-
+    this.postagemService.refreshToken()
     this.listarPostagens()
+
   }
 
   listarPostagens(){
@@ -54,9 +56,16 @@ export class FeedComponent implements OnInit {
     this.tipoPost = event.target.value
   }
 
+  tipoDemanda(event:any) {
+    this.demanda = event.target.value
+  }
+
   publicar(){
     this.user.userId = this.idUser
     this.postagem.user = this.user
+
+    this.postagem.tipoPostagem = this.tipoPost
+    this.postagem.demanda = this.demanda
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
       this.postagem = resp;
@@ -65,5 +74,6 @@ export class FeedComponent implements OnInit {
       this.listarPostagens()
     })
   }
+  
 
 }
