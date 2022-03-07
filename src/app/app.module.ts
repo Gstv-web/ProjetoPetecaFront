@@ -12,6 +12,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FeedComponent } from './feed/feed.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { FeedComponent } from './feed/feed.component';
     CadastrarComponent,
     ContatoComponent,
     SobreNosComponent,
-    FeedComponent
+    FeedComponent,
+    PostagemEditComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,10 @@ import { FeedComponent } from './feed/feed.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
