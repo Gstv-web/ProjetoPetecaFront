@@ -1,3 +1,7 @@
+.fs-16 {
+    font-size: 16pt
+}
+
 #footer {
-    background-color: #00c2e0;
+    background-image: url(../../assets/img/bg-rodape.png);
 }
