@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Atualizar postagem</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group ">
+                <label for="titulo ">Titulo:</label>
+                <input type="text " class="form-control " id="titulo " placeholder="Digite o Titulo " [(ngModel)]="postagem.titulo ">
+            </div>
+
+            <div class="form-group">
+                <label for="demanda">Demanda:</label>
+                <select class="form-control " name="demanda" id="demanda" (change)="tipoDemanda($event)">
+                    <option value="">
+                      Selecione uma demanda:
+                    </option>
+                    <option value="OFERTA">Oferta</option>
+                    <option value="PROCURA">Procura</option>
+                </select>
+            </div>
+
+            <div class="form-group ">
+                <label for="categoria">Categoria</label>
+                <select class="form-control " name="categoria" id="categoria" (change)="tipoPostagem($event)">
+                <option value="">
+                  Selecione uma categoria:
+                </option>
+                <option value="DOACAODEROUPA">Doação de roupas</option>
+                <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
+                <option value="VAGACURSOLIVRE">Vaga de curso livre</option>
+                <option value="VAGACURSOPROFISSIONALIZANTE">Vaga de curso profissionalizante</option>
+                <option value="VAGACONTRATURNO">Vaga de contra turno</option>
+                <option value="VAGAOFICINAS">Vaga Oficinas</option>
+                <option value="VAGASOCIAL">Vaga Social</option>
+              </select>
+            </div>
+
+            <div class="form-group ">
+                <label for="texto ">Texto:</label>
+                <textarea class="form-control " name="texto " id="texto " rows="3 " [(ngModel)]="postagem.descricao"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="localidade">Localidade:</label>
+                <input class="form-control" type="text" name="localidade" id="localidade" [(ngModel)]="postagem.localidade">
+            </div>
+        </div>
+    </div>
+</div>

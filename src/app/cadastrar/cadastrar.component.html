@@ -9,53 +9,53 @@
 
                     <div class="form-group">
                         <label for="nome">Razão Social:</label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome Completo">
+                        <input [(ngModel)]="user.razaoSocial" class="form-control" type="text" name="nome" id="nome" placeholder="Nome Completo">
                     </div>
 
                     <div class="form-group">
                         <label for="usuario">Usuario:</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Login">
+                        <input [(ngModel)]="user.email" class="form-control" type="text" name="usuario" id="usuario" placeholder="Login">
                     </div>
 
                     <div class="form-group">
                         <label for="foto">Foto:</label>
-                        <input class="form-control" type="text" name="foto" id="foto" placeholder="Coloque um link para sua foto">
+                        <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Coloque um link para sua foto">
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha:</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Senha">
+                        <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" placeholder="Senha">
                     </div>
 
                     <div class="form-group">
                         <label for="confSenha">Confirmar Senha:</label>
-                        <input class="form-control" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua Senha">
+                        <input [(ngModel)]="user.senha" class="form-control" type="password" name="confSenha" id="confSenha" placeholder="Confirme sua Senha">
                     </div>
 
 
                     <div class="form-group">
                         <label for="contato">Contato:</label>
-                        <input class="form-control" type="password" name="contato" id="contato" placeholder="Contato">
+                        <input [(ngModel)]='user.contato' class="form-control" type="text" name="contato" id="contato" placeholder="Contato">
                     </div>
 
 
                     <div class="form-group">
                         <label for="confSenha">Endereço:</label>
-                        <input class="form-control" type="password" name="endereco" id="endereco" placeholder="Endereço">
+                        <input class="form-control" [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" placeholder="Endereço">
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de Usuário:</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
                             <option value="">Selecione um tipo de Usuário</option>
-                            <option value="ong">ONG</option>
-                            <option value="emp">EMPRESA</option>
-                            <option value="org">ORGÃO GOVERNAMENTAL</option>
+                            <option value="ONG">ONG</option>
+                            <option value="EMPRESA">Empresa</option>
+                            <option value="ORGGOVERNAMENTAL">Orgão Governamental</option>
                         </select>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger mr-5" routerLink="/entrar">Cancelar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                        <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
                     </div>
                 </div>
             </div>

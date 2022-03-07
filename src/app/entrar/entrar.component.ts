@@ -35,7 +35,7 @@ export class EntrarComponent implements OnInit {
         environment.userId = this.credentials.userId;
         environment.token = this.credentials.token;
 
-        this.router.navigate(["/inicio"]);
+        this.router.navigate(["/feed"]);
       },
       error: erro => {
       if (erro.status == 400) {
