@@ -11,6 +11,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { FeedComponent } from './feed/feed.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     RodapeComponent,
     CadastrarComponent,
     ContatoComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
