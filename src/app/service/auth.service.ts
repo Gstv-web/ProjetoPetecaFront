@@ -17,6 +17,12 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken() {
+    this. token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   entrar (credentials:Credentials): Observable<Credentials> {
     return this.http.post<Credentials> ('https://peteca.herokuapp.com/user/login', credentials)
   }
@@ -27,7 +33,7 @@ export class AuthService {
 
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`https://peteca.herokuapp.com/user/${id}`)
+    return this.http.get<User>(`https://peteca.herokuapp.com/user/${id}`,this.token)
   }
 
   putUser(user: User): Observable<User>{

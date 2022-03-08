@@ -14,6 +14,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FeedComponent } from './feed/feed.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     ContatoComponent,
     SobreNosComponent,
     FeedComponent,
-    PostagemEditComponent
+    PostagemEditComponent,
+    PostagemDeleteComponent
   ],
   imports: [
     BrowserModule,

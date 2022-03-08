@@ -36,6 +36,7 @@ export class FeedComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     this.postagemService.refreshToken()
+    this.authService.refreshToken()
     this.listarPostagens()
 
   }
