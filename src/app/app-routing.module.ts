@@ -10,7 +10,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'entrar', pathMatch:'full'},
+  {path:'', redirectTo:'sobre-nos', pathMatch:'full'},
 
   //Rotas
 

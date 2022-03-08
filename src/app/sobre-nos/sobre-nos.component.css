@@ -15,9 +15,9 @@
     background-color: #FFFDF7;
 }
 
-img.logo-peteca {
-    width: auto;
-    height: auto;
+.logo-peteca {
+    width: 50vw;
+    height: 50vh;
     object-fit: contain;
     padding: 05%;
     border: 05%;
@@ -236,5 +236,25 @@ element {
 h4 {
     color: #FFFDF7;
     font: 900px;
-    ;
+}
+
+.img1 {
+    background-image: url("../../assets/img/carrossel-01.png");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img2 {
+    background-image: url("../../assets/img/carrossel-02.png");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img3 {
+    background-image: url("../../assets/img/carrossel-03.png");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
