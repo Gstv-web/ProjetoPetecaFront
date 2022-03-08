@@ -17,6 +17,12 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken() {
+    this. token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   entrar (credentials:Credentials): Observable<Credentials> {
     return this.http.post<Credentials> ('https://peteca.herokuapp.com/user/login', credentials)
   }

@@ -27,12 +27,13 @@ export class PostagemDeleteComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    this.idPost = this.route.snapshot.params['id']
-    this.findByIdPostagem(this.idPost)
+    this.idPost = this.route.snapshot.params["id"]
+    this.findByIdPostagem()
 
   }
-  findByIdPostagem (id:number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+
+  findByIdPostagem () {
+    this.postagemService.getByIdPostagem(this.idPost).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
