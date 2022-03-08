@@ -1,160 +1,170 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<div class="container-fluid">
+    <div class="row navegacao">
+        <nav class="d-block m-0 ml-auto">
+            <ul class="d-flex justify-content-around align-items-center ">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peteca</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-</head>
+                <li class="mr-4">Sobre nós</li>
+                <li class="mr-4">Depoimentos</li>
+                <li class="mr-4">Nosso time</li>
+                <li class="mr-4">Link da Jess</li>
+                <li class="mr-4"><a routerLink="/entrar">Login</a></li>
+                <li class="mr-4"><a routerLink="/cadastrar">Cadastro</a></li>
 
-<body>
-    <div class="container-fluid">
+            </ul>
+        </nav>
+    </div>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators rounded-circle" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators rounded-circle" ata-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class=" img1 d-block w-100" alt="..."></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="img2 d-block w-100" alt="..."></div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="img3 d-block w-100" alt="..."></div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </button>
-                    </div>
-
-                </div>
-                <div id="corpo" class="logo-area container col-12 row justify-content-center vw-100">
-                    <!-- logo -->
-                    <img src="../../assets/img/logoPeteca.png" class="logo-peteca" />
-                </div>
-
-                <!-- sobre-nos -->
-                <div class="row d-flex col-12 container-fluid justify-content-center" id="sobre-nos-area">
-                    <h1 class="sobre-nos-titulo">sobre nós</h1>
-
-                    <p id="descricao-sobre" class="row d-flex-md-3 col-11 justify-content-center">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        voluptua.
-                    </p>
-                </div>
-
-                <!--Teste Card-->
-
-                <!-- cards -->
-                <nav id="depoimento-area">
-                    <div class="row d-flex bg-transparent justify-content-center">
-                        <h2 class="row d-flex col-12 container-fluid justify-content-center" id="depoimento-titulo">
-                            Depoimentos
-                        </h2>
-
-                        <div class="container d-flex-md-3 col-4" id="">
-                            <div class="d-flex justify-content-center mb-4"><img class="row col-3" id="img-depoimento"
-                                    src="..//../assets/img/dep1.png" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center text-dark mb-3">Sara Bastos</h4>
-                            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-
-                        <div class="container d-flex-md-3 col-4" id="">
-                            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
-                                    src="..//../assets/img/dep2.png" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center text-dark mb-3">Pey Jon Ming</h4>
-                            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
+    <!-- CARROSSEL -->
+    <div id="carouselExampleIndicators" class="carousel slide inicio" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators rounded-circle" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators rounded-circle" ata-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- imagens carrossel -->
+                <div class=" img1 d-block w-100"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="img2 d-block w-100"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="img3 d-block w-100"></div>
+            </div>
+            <!-- fim imagens carrossel -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+    <!-- FIM CARROSSEL -->
+</div>
 
 
-                        <div class="container d-flex-md-3 col-4" id="">
-                            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
-                                    src="..//../assets/img/dep3.png" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center text-dark mb-3">Ruth Castro</h4>
-                            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-                    </div>
-                </nav>
-
-                <!-- cards -->
-                <nav id="time-area">
-                    <div class="row d-flex bg-transparent justify-content-center">
-                        <h2 class="row d-flex col-12 container-fluid justify-content-center" id="nosso-time-titulo">
-                            nosso time :)
-                        </h2>
-
-                        <div class="container d-flex-md-3 col-3" id="element">
-                            <div class="d-flex justify-content-center mb-4"><img class="row col-3" id="img-element"
-                                    src="..//../assets/img/foto1.png" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center">Karolyne Corol</h4>
-                            <p class="row col-11 justify-content-center" id="descricao-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-
-                        <div class="container d-flex-md-3 col-3" id="element">
-                            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
-                                    src="..//../assets/img/foto2.webp" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center">Gustavo Oliveira</h4>
-                            <p class="row col-11 justify-content-center" id="descricao-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-
-                        <div class="container d-flex-md-3 col-3" id="element">
-                            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
-                                    src="..//../assets/img/foto3.webp" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center d-flex">Jessica Curti</h4>
-                            <p class="row col-11 justify-content-center" id="descricao-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-
-                        <div class="container d-flex-md-3 col-3" id="element">
-                            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
-                                    src="..//../assets/img/foto4.webp" alt="" /></div>
-                            <h4 class="row col-11 justify-content-center">Paulo Marsiglia</h4>
-                            <p class="row col-11 justify-content-center" id="descricao-element">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </p>
-                        </div>
-                    </div>
-                </nav>
+<div class="row"></div>
+<div class="container-fluid">
 
 
+    <div class="d-flex col-md-12 mt-5 align-items-center">
+        
+        <div id="corpo" class="col-md-4">
+            <!-- logo -->
+            <img src="../../assets/img/logoPeteca.png" class="logo-peteca" />
+        </div>
+
+        <div class="col-md-6 justify-content-center"  id="sobre-nos-area">
+
+            <h1 class="sobre-nos-titulo">sobre nós</h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                voluptua.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- sobre-nos -->
+
+<!--Teste Card-->
+
+<!-- cards -->
+<nav id="depoimento-area">
+    <div class="row d-flex bg-transparent justify-content-center">
+        <h2 class="row d-flex col-12 container-fluid justify-content-center" id="depoimento-titulo">
+            Depoimentos
+        </h2>
+
+        <div class="container d-flex-md-3 col-4" id="">
+            <div class="d-flex justify-content-center mb-4"><img class="row col-3" id="img-depoimento"
+                    src="..//../assets/img/dep1.png" alt="" /></div>
+            <h4 class="row col-11 justify-content-center text-dark mb-3">Sara Bastos</h4>
+            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+
+        <div class="container d-flex-md-3 col-4" id="">
+            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
+                    src="..//../assets/img/dep2.png" alt="" /></div>
+            <h4 class="row col-11 justify-content-center text-dark mb-3">Pey Jon Ming</h4>
+            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
 
 
-</body>
+        <div class="container d-flex-md-3 col-4" id="">
+            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
+                    src="..//../assets/img/dep3.png" alt="" /></div>
+            <h4 class="row col-11 justify-content-center text-dark mb-3">Ruth Castro</h4>
+            <p class="row col-11 justify-content-center text-justify" id="depoimento-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+    </div>
+</nav>
 
-</html>
+<!-- cards -->
+<nav id="time-area">
+    <div class="row d-flex bg-transparent justify-content-center">
+        <h2 class="row d-flex col-12 container-fluid justify-content-center" id="nosso-time-titulo">
+            nosso time :)
+        </h2>
+
+        <div class="container d-flex-md-3 col-3" id="element">
+            <div class="d-flex justify-content-center mb-4"><img class="row col-3" id="img-element"
+                    src="..//../assets/img/foto1.png" alt="" /></div>
+            <h4 class="row col-11 justify-content-center">Karolyne Corol</h4>
+            <p class="row col-11 justify-content-center" id="descricao-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+
+        <div class="container d-flex-md-3 col-3" id="element">
+            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
+                    src="..//../assets/img/foto2.webp" alt="" /></div>
+            <h4 class="row col-11 justify-content-center">Gustavo Oliveira</h4>
+            <p class="row col-11 justify-content-center" id="descricao-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+
+        <div class="container d-flex-md-3 col-3" id="element">
+            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
+                    src="..//../assets/img/foto3.webp" alt="" /></div>
+            <h4 class="row col-11 justify-content-center d-flex">Jessica Curti</h4>
+            <p class="row col-11 justify-content-center" id="descricao-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+
+        <div class="container d-flex-md-3 col-3" id="element">
+            <div class="d-flex justify-content-center mb-4"><img class="col-3" id="img-element"
+                    src="..//../assets/img/foto4.webp" alt="" /></div>
+            <h4 class="row col-11 justify-content-center">Paulo Marsiglia</h4>
+            <p class="row col-11 justify-content-center" id="descricao-element">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+        </div>
+    </div>
+</nav>
