@@ -1,40 +1,40 @@
 <div class="container my-5">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center text-secondary">Deletar postagem</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h4 class="">Você tem certeza que deseja continuar?</h4>
-    </div>
-  </div>
-
-  <div class="row d-flex justify-content-center mt-4">
-    <div class="col-md-4">
-      <!--Todas as Postagens-->
-      <div class="card-columns">
-        <div class="card text-center" *ngFor="let item of listaPostagens">
-          <div class="card-body">
-            <h5 class="card-title m-0">{{ item.titulo }}</h5>
-            <small class="text-muted">Tema: {{ item.tipoPostagem }}</small>
-            <p class="card-text mt-3">{{ item.descricao }}</p>
-            <p class="card-text">
-              <small class="text-muted">
-                {{ item.data | date: "dd/MM/yyyy" }} às
-                {{ item.data | date: "HH:mm" }}
-              </small>
-            </p>
-
-            <p class="card-text">
-              <small class="text-muted">
-                by: {{ item.user.razaoSocial }}
-              </small>
-            </p>
-          </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Deletar postagem</h1>
         </div>
-      </div>
     </div>
-  </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="">Você tem certeza que deseja continuar?</h4>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+        <div class="col-md-4">
+            <!--Todas as Postagens-->
+            <div class="card-columns">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">{{ postagem.titulo }}</h5>
+                        <small class="text-muted">Tema: {{ postagem.tipoPostagem }}</small>
+                        <p class="card-text mt-3">{{ postagem.descricao }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                {{ postagem.data | date: "dd/MM/yyyy" }} às
+                {{ postagem.data | date: "HH:mm" }}
+              </small>
+                        </p>
+
+                        <p class="card-text">
+                            <small class="text-muted">
+                by: {{ postagem.user.razaoSocial }}
+              </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
