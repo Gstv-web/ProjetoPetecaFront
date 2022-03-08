@@ -30,7 +30,7 @@ export class PostagemService {
   }
 
   getByTituloPostagem(titulo: string): Observable<Postagem>{
-    return this.http.get<Postagem>(`https://peteca.herokuapp.com/postagem/${titulo}`, this.token)
+    return this.http.get<Postagem>(`https://peteca.herokuapp.com/postagem/titulo/${titulo}`, this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
@@ -42,6 +42,6 @@ export class PostagemService {
   }
 
   deletePostagem(id: number){
-    return this.http.delete(`https://peteca.herokuapp.com/postagem/${id}`, this.token)
+    return this.http.delete(`https://peteca.herokuapp.com/postagem/delete/${id}`, this.token)
   }
 }
