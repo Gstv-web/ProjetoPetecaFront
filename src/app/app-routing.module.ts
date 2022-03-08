@@ -5,10 +5,12 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'entrar', pathMatch:'full'},
+  {path:'', redirectTo:'sobre-nos', pathMatch:'full'},
 
   //Rotas
 
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'cadastrar', component: CadastrarComponent},
   {path:'contato',component: ContatoComponent},
   {path:'sobre-nos', component: SobreNosComponent},
-  {path:'feed', component: FeedComponent}
+  {path:'feed', component: FeedComponent},
+  {path:'postagem-edit/:id', component: PostagemEditComponent},
+  {path:'postagem-delete/:id', component: PostagemDeleteComponent}
 
 ];
 
