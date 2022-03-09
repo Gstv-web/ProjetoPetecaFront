@@ -15,6 +15,7 @@ import { Postagem } from '../model/Postagem';
 export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
+  postagemEdit: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
   idUser = environment.userId
@@ -53,6 +54,13 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  findByIdPostagem (id:number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      this.postagemEdit = resp
+    })
+  }
+
   tipoPostagem(event:any) {
     this.tipoPost = event.target.value
   }
@@ -76,5 +84,17 @@ export class FeedComponent implements OnInit {
     })
   }
   
+  atualizar(){
+    this.postagemEdit.demanda = this.demanda
+    this.postagemEdit.tipoPostagem = this.tipoPost
+
+    console.log(this.postagemEdit)
+    this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
+      this.postagemEdit = resp
+      alert('Postagem atualizada com sucesso!')
+      this.router.navigate(['/feed'])
+      this.listarPostagens()
+    })
+  }
 
 }

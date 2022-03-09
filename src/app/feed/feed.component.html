@@ -79,7 +79,7 @@
     </div>
   </nav>
 
-  <!--Começo das Postagens-->
+  <!--Começo das abas Postagens-->
 
   <div class="tab-content mt-3" id="nav-tabContent">
     <div
@@ -133,7 +133,9 @@
             </p>
 
             <a
-            [routerLink]="['/postagem-edit', item.id]"
+            data-toggle="modal"
+            data-target="#editarPostagem"
+            (click)="findByIdPostagem(item.id)"
             class="text-info mr-3"
             href=""
               >Editar</a
@@ -174,8 +176,9 @@
       -->
   </div>
 </div>
+<!-- fim das abas  -->
 
-<!-- Modal -->
+<!-- Modal NOVA POSTAGEM-->
 
 <div
   class="modal fade"
@@ -221,7 +224,7 @@
           >
             <option value="">Selecione uma demanda:</option>
             <option value="OFERTA">Oferta</option>
-            <option value="PROCURA">Procura</option>
+            <option value="PPROCURA">Procura</option>
           </select>
         </div>
 
@@ -279,6 +282,117 @@
           data-dismiss="modal"
         >
           Publicar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal editar postagem -->
+
+<div
+  class="modal fade"
+  id="editarPostagem"
+  tabindex="-1 "
+  role="dialog "
+  aria-labelledby="TituloModalCentralizado "
+  aria-hidden="true "
+>
+  <div class="modal-dialog modal-dialog-centered" role="document ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado ">Editar Postagem</h5>
+        <button
+          type="button "
+          class="close"
+          data-dismiss="modal "
+          aria-label="Fechar "
+        >
+          <span aria-hidden="true ">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo ">Titulo:</label>
+          <input
+            type="text "
+            class="form-control"
+            id="titulo "
+            placeholder="Digite o Titulo "
+            [(ngModel)]="postagemEdit.titulo"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="demanda">Demanda:</label>
+          <select
+            class="form-control"
+            name="demanda"
+            id="demanda"
+            (change)="tipoDemanda($event)"
+          >
+            <option value="">Selecione uma demanda:</option>
+            <option value="OFERTA">Oferta</option>
+            <option value="PPROCURA">Procura</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select
+            class="form-control"
+            name="categoria"
+            id="categoria"
+            (change)="tipoPostagem($event)"
+          >
+            <option value="">Selecione uma categoria:</option>
+            <option value="DOACAODEROUPA">Doação de roupas</option>
+            <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
+            <option value="VAGACURSOLIVRE">Vaga de curso livre</option>
+            <option value="VAGACURSOPROFISSIONALIZANTE">
+              Vaga de curso profissionalizante
+            </option>
+            <option value="VAGACONTRATURNO">Vaga de contra turno</option>
+            <option value="VAGAOFICINAS">Vaga Oficinas</option>
+            <option value="VAGASOCIAL">Vaga Social</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="texto ">Texto:</label>
+          <textarea
+            class="form-control"
+            name="texto "
+            id="texto "
+            rows="3 "
+            [(ngModel)]="postagemEdit.descricao"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="localidade">Localidade:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="localidade"
+            id="localidade"
+            [(ngModel)]="postagemEdit.localidade"
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="atualizar()"
+          data-dismiss="modal"
+        >
+          Atualizar
         </button>
       </div>
     </div>
