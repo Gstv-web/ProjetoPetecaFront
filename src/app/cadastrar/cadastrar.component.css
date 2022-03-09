@@ -1,7 +1,21 @@
-#bgImg {
+/* #bgImg {
     background-image: url('https://i.imgur.com/jAZOVhd.jpg');
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+} */
+
+#form {
+    padding: 0 70px !important;
+    border: 1px solid #00C2E0;
+    border-radius: 2%;
+}
+
+.btnCadastrar {
+    background-color: #F5952C;
+}
+
+.btnCancelar {
+    background-color: #856AB4;
 }
