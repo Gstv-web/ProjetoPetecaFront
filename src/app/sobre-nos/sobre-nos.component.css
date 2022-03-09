@@ -1,63 +1,32 @@
-#corpo {
-    background-color: #FFFDF7;
+@font-face {
+    font-family: Poppins;
+    src: url('../../assets/fonts/Poppins/Poppins-Bold.ttf') format('ttf');
 }
 
 * {
+    font-family: "Poppins";
     background-color: none;
     margin: auto;
+    /* box-sizing: border-box; */
     padding: 0;
-    box-sizing: border-box;
     border: none;
-    font-family: "Poppins";
 }
 
+
+/*
 #sobre-nos-area {
     background-color: #FFFDF7;
 }
+*/
 
 .logo-peteca {
     width: 50vw;
     height: 50vh;
     object-fit: contain;
-    padding: 05%;
-    border: 05%;
-    overflow-x: 05%;
 }
 
-.sobre-nos-titulo {
-    background-color: none;
-    width: auto;
-    height: auto;
-    font-family: Poppins;
-    font-size: auto;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #000;
-}
 
-#descricao-sobre {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.53;
-    letter-spacing: normal;
-    text-align: center;
-    color: #000;
-    padding: 05%;
-    border: 05%;
-    margin: 05%;
-    overflow-x: 05%;
-}
-
+/*
 #nosso-time-titulo {
     background-color: #856AB4;
     width: auto;
@@ -76,7 +45,10 @@
     margin: 05%;
     overflow-x: 05%;
 }
+*/
 
+
+/*
 #depoimento-titulo {
     width: auto;
     height: auto;
@@ -94,7 +66,10 @@
     margin: 05%;
     overflow-x: 05%;
 }
+*/
 
+
+/*
 #time-area {
     background-color: #856AB4;
     justify-content: auto;
@@ -110,8 +85,11 @@
     color: #000;
     align-items: center;
 }
+*/
 
-#depoimento-area {
+
+/*
+depoimento-area {
     justify-content: auto;
     width: auto;
     height: auto;
@@ -125,7 +103,10 @@
     color: black;
     align-items: center;
 }
+*/
 
+
+/*
 #nosso-time-titulo {
     color: #FFFDF7;
     font-family: Poppins;
@@ -143,6 +124,7 @@
     justify-content: center;
     align-items: center;
 }
+*/
 
 
 /*
@@ -162,6 +144,8 @@ element {
 }
 */
 
+
+/*
 #descricao-element {
     text-align: justify;
     background-color: none;
@@ -185,18 +169,23 @@ element {
     color: #fffdf7;
     align-items: center;
 }
+*/
 
+
+/*
 .container-d-flex-md-3-col-3 {
     background-color: #856AB4;
     justify-content: center;
 }
+*/
 
+
+/*
 #img-element {
     display: inline-block;
     align-items: center;
     width: auto;
     height: auto;
-    background: #856AB4;
     border-radius: 70%;
     justify-content: center;
     justify-self: center;
@@ -205,24 +194,10 @@ element {
     border: auto;
     align-items: center;
 }
+*/
 
-.d-flex-justify-content-center {
-    display: inline-block;
-    align-items: center;
-    width: auto;
-    height: auto;
-    background: #856AB4;
-    border-radius: 70%;
-    justify-content: center;
-    justify-self: center;
-    border: none;
-    padding: 05%;
-    border: 05%;
-    overflow-x: 05%;
-    align-items: center;
-    color: #FFFDF7;
-}
 
+/*
 #descricao-element {
     color: #FFFDF7;
 }
@@ -237,6 +212,10 @@ h4 {
     color: #FFFDF7;
     font: 900px;
 }
+*/
+
+
+/* CARROSSEL*/
 
 .img1 {
     background-image: url("../../assets/img/carrossel-01.png");
@@ -258,3 +237,19 @@ h4 {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+li {
+    list-style-type: none;
+}
+
+.inicio {
+    margin-top: -25px;
+}
+
+.navegacao {
+    z-index: 10;
+    position: relative;
+}
+
+
+/*FIM CARROSSEL*/
