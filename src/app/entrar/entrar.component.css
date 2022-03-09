@@ -1,5 +1,6 @@
 #bg {
     background-image: url(../../assets/img/bgLogin.png);
+    /*background-size: cover;*/
 }
 
 .btnEntrar {
