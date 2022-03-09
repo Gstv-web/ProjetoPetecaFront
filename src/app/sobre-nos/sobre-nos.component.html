@@ -46,8 +46,6 @@
     <!-- FIM CARROSSEL -->
 </div>
 
-
-<div class="row" style="border:1px solid black; height:2vh;"></div>
 <div class="container-fluid">
 
     <!--Sobre Nós-->
@@ -151,3 +149,66 @@
         </div>
     </div>
 </nav>
+
+<!--Contato-->
+
+<section class="row contato-area bg-light m-0 py-4 vh-10" id="contato">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 contato-area-left text-left">
+                <h1 style="font-weight:700">
+                    CONTATO
+                </h1>
+                <p class="pt-3 pb-3 text-dark">
+                    Olá, caso tenha gostado e se interessado no projeto, mande uma mensagem para os colaboradores.
+                </p>
+
+                <p>E-mail: grupo-peteca@gmail.com</p>
+
+                <p>São Paulo - SP</p>
+
+                <p>Telefone: (00) 0000-0000</p>
+            </div>
+
+            <div class="col-md-7 contato-area-right bg-light ">
+                <form class=" row g-3 p-5 bg-light">
+
+                    <!--Label do Nome-->
+
+                    <div class="col-md-6 ">
+                        <label for="Nome"></label>
+                        <input type="text" id="nome" onkeyup="valorNome()" placeholder="Nome">
+                        <div id="txtNome"></div>
+                    </div>
+
+                    <!--Label de Sobrenome-->
+                    <div class="col-md-6 ">
+                        <label for="Sobrenome"></label>
+                        <input type="text" id="sobrenome" onkeyup="valorSobrenome()" placeholder="Sobrenome">
+                        <div id="txtSobrenome"></div>
+                    </div>
+
+                    <!--Label de E-mail-->
+                    <div class="col-md-11">
+                        <label for="Email"></label>
+                        <input type="email" id="email" class="form-control" placeholder="E-mail"><br>
+                    </div>
+
+                    <!--Label de Assunto-->
+                    <div class="col-12 ">
+                        <label for="assunto"></label>
+                        <textarea name="assunto" id="assunto" cols="64" rows="5" onkeyup="validaAssunto()" placeholder="Assunto"></textarea>
+                        <div id="contador"></div>
+                        <div id="txtAssunto"></div>
+                    </div>
+
+                    <!--Botão de Enviar-->
+                    <div class="container-fluid d-flex justify-content-end">
+                        <button>Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
