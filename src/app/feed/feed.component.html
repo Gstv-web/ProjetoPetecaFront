@@ -141,7 +141,9 @@
               >Editar</a
             >
             <a
-            [routerLink]="['/postagem-delete', item.id]"
+            data-toggle="modal"
+            data-target="#deletarPostagem"
+            (click)="findByIdPostagem(item.id)"
             class="text-danger"
             href=""
               >Apagar</a
@@ -198,7 +200,7 @@
           data-dismiss="modal "
           aria-label="Fechar "
         >
-          <span aria-hidden="true ">&times;</span>
+          <span aria-hidden="true " data-dismiss="modal">&times;</span>
         </button>
       </div>
 
@@ -309,7 +311,7 @@
           data-dismiss="modal "
           aria-label="Fechar "
         >
-          <span aria-hidden="true ">&times;</span>
+          <span aria-hidden="true" data-dismiss="modal">&times;</span>
         </button>
       </div>
 
@@ -393,6 +395,76 @@
           data-dismiss="modal"
         >
           Atualizar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de deletar postagem -->
+
+
+<div
+  class="modal fade"
+  id="deletarPostagem"
+  tabindex="-1 "
+  role="dialog "
+  aria-labelledby="TituloModalCentralizado "
+  aria-hidden="true "
+>
+  <div class="modal-dialog modal-dialog-centered" role="document ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado ">Deletar Postagem</h5>
+        <button
+          type="button "
+          class="close"
+          data-dismiss="modal "
+          aria-label="Fechar "
+        >
+          <span aria-hidden="true" data-dismiss="modal">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo ">Titulo:</label>
+          <p>{{ postagem.titulo }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="demanda">Demanda:</label>
+          <p>{{ postagem.demanda }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <p>{{ postagem.tipoPostagem }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="texto ">Texto:</label>
+          <p>{{ postagem.descricao }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="localidade">Localidade:</label>
+          <p>{{ postagem.localidade }}</p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="apagar()"
+          data-dismiss="modal"
+        >
+          Apagar
         </button>
       </div>
     </div>
