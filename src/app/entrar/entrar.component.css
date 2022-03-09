@@ -1,3 +1,26 @@
+#bg {
+    background-image: url(../../assets/img/bgLogin.png);
+}
+
+.btnEntrar {
+    background-color: #F5952C;
+}
+
+.hr1::after {
+    content: "ou";
+    display: inline-block;
+    position: relative;
+    top: -0.9em;
+    padding: 0 0.3em;
+    background: #F8F9FA;
+}
+
+#form {
+    padding: 0 70px !important;
+    border: 1px solid #00C2E0;
+    border-radius: 2%;
+}
+
 .link-midia-social:not(:first-child){
     margin-left: 10px;
 }
@@ -5,9 +28,9 @@
 .facebook {
     border: 1px solid #bdc3c7;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     color: #bdc3c7;
 }
@@ -21,9 +44,9 @@
 .google {
     border: 1px solid #bdc3c7;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     color: #bdc3c7;
 }
@@ -37,9 +60,9 @@
 .linkedin {
     border: 1px solid #bdc3c7;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     color: #bdc3c7;
 }
