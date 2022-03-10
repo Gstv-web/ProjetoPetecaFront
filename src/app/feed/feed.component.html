@@ -1,88 +1,68 @@
 <div class="container-fluid bg-secondary">
-    <div class="container">
-        <div class="row d-flex align-itens-center">
-            <div class="col-md-6 d-flex flex-column align-itens-center justify-content-center text-white">
-                <h2 class="fs-54">Procure aqui por doações ou faça a sua! <span>projeto integrador</span></h2>
-                <h5 class="fs-18">Expresse aqui os seus pensamentos e opniões!</h5>
-                <p>Publique aqui o que você quiser... tmj</p>
+  <div class="container">
+    <div class="row d-flex align-itens-center">
+      <div class="col-md-6 d-flex flex-column align-itens-center justify-content-center text-white">
+        <h2 class="fs-54">Procure aqui por doações ou faça a sua! <span>projeto integrador</span></h2>
+        <h5 class="fs-18">Expresse aqui os seus pensamentos e opniões!</h5>
+        <p>Publique aqui o que você quiser... tmj</p>
 
-                <!--Button's-->
-                <div class="row d-flex justify-content-center md-3 mt-5">
-                    <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">
+        <!--Button's-->
+        <div class="row d-flex justify-content-center md-3 mt-5">
+          <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">
             Nova Postagem
           </button>
-                    <a class="btn btn-outline-light" href="#postagens">Ver Postagem</a>
-                </div>
-            </div>
-
-            <!--Imagem do Imgur-->
-
-            <div class="col-md-6 d-flex justify-content-center">
-                <img src="https://i.imgur.com/LER4D3s.png" alt="img do will" width="450" />
-            </div>
+          <a class="btn btn-outline-light" href="#postagens">Ver Postagem</a>
         </div>
+      </div>
+
+      <!--Imagem do Imgur-->
+
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="https://i.imgur.com/LER4D3s.png" alt="img do will" width="450" />
+      </div>
     </div>
+  </div>
 </div>
 
 <!--NavBar-->
 
 <div class="container mb-5 mt-5" id="postagens">
-    <nav>
-        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-            <a class="nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true">Todas as Postagens</a
-      >
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab">
+      <a class="nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
+        href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true">
+        Todas as Postagens
+      </a>
 
-      <a
-        class="nav-link text-secondary font-weight-bold"
-        id="nav-profile-tab"
-        data-toggle="tab"
-        href="#minhasPostagens"
-        role="tab"
-        aria-controls="minhasPostagens"
-        aria-selected="false"
-        (click)="findByIdUser()"
-        >Minhas Postagens</a
-      >
+      <a class="nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab" href="#minhasPostagens"
+        role="tab" aria-controls="minhasPostagens" aria-selected="false" (click)="findByIdUser()">Minhas Postagens</a>
 
-      <a
-        class="nav-link text-secondary font-weight-bold"
-        id="nav-contact-tab"
-        data-toggle="tab"
-        href="#postagemTema"
-        role="tab"
-        aria-controls="postagemTema"
-        aria-selected="false"
-        >Postagem por Tema</a
-      >
+      <a class="nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab" href="#postagemTema"
+        role="tab" aria-controls="postagemTema" aria-selected="false">Postagem por Tema</a>
     </div>
   </nav>
 
   <!--Começo das Postagens-->
 
   <div class="tab-content mt-3" id="nav-tabContent">
-    <div
-      class="tab-pane fade show active"
-      id="todasPostagens"
-      role="tabpanel"
-      aria-labelledby="todasPostagens-tab"
-    >
+    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
       <!--Todas as Postagens-->
-      <div class="card">
-        <div class="card text-center" *ngFor="let item of listaPostagens">
+      <div class="d-flex flex-column align-items-center mx-auto justify-content-center col-md-9">
+        <div class="card text-center mb-3" *ngFor="let item of listaPostagens">
           <div class="card-body">
 
             <!--Imagem, Razão Social e Data-->
-            <div d-flex col-12>
+            <div class='d-flex col-12'>
               <img src="{{foto}}" class="rounded-circle w-25" alt="fotoDaEmpresa">
 
               <p class="card-text">
-                 by: {{ item.user.razaoSocial }}
+                by: {{ item.user.razaoSocial }}
               </p>
 
               <p class="card-text">
                 publicado em:
-               {{ item.data | date: "dd/MM/yyyy" }} às
-               {{ item.data | date: "HH:mm" }}
+                {{ item.data | date: "dd/MM/yyyy" }} às
+                {{ item.data | date: "HH:mm" }}
               </p>
 
             </div>
@@ -97,21 +77,21 @@
             </div>
 
             <!--Descrição-->
-              <div>
-                Descrição:
-                <br>
-                <textarea class="card-text mt-3" cols="64" rows="5" placeholder="Descrição">{{ item.descricao }}</textarea>
-              </div>
+            <div>
+              Descrição:
+              <br>
+              <pre>{{ item.descricao }}</pre>
+            </div>
 
             <!--Localidade-->
-              <div>
-                <p>Localidade: {{item.localidade}}</p>
-              </div>
+            <div>
+              <p>Localidade: {{item.localidade}}</p>
+            </div>
 
             <!--Botão-->
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success">Quero</button>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Quero</button>
+            </div>
 
           </div>
         </div>
@@ -120,12 +100,7 @@
 
 
     <!--Minhas Postagens-->
-    <div
-      class="tab-pane fade"
-      id="minhasPostagens"
-      role="tabpanel"
-      aria-labelledby="minhasPostagens-tab"
-    >
+    <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
       <div class="card-columns">
         <div class="card text-center" *ngFor="let item of user.postagem">
           <div class="card-body">
@@ -139,69 +114,60 @@
               </small>
             </p>
 
-            <a
-            [routerLink]="[ '/postagem-edit', item.id]"
-            class="text-info mr-3"
-            href=""
-              >Editar</a
-            >
-            <a
-            [routerLink]="[ '/postagem-delete', item.id]"
-            class="text-danger"
-            href=""
-              >Apagar</a
-            >
+            <a [routerLink]="[ '/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+            <a [routerLink]="[ '/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!--Postagem Tema
-        <div class="tab-pane fade " id="postagemTema " role="tabpanel " aria-labelledby="postagemTema-tab ">
-            <div class="tab-pane fade " id="minhasPostagens " role="tabpanel " aria-labelledby="minhasPostagens-tab ">
+    <!-- Postagem Tema -->
+    <div class="tab-pane fade" id="postagemTema" role="tabpanel " aria-labelledby="postagemTema-tab">
+      <!-- <div class="tab-pane fade " id="minhasPostagens " role="tabpanel " aria-labelledby="minhasPostagens-tab "> -->
+      <select name="tipo" id="tipo" (change)="select($event)">
+        <option value="">Selecione uma categoria:</option>
+        <option value="DOACAODEROUPA">Doação de roupas</option>
+        <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
+        <option value="VAGACURSOLIVRE">Vaga de curso livre</option>
+        <option value="VAGACURSOPROFISSIONALIZANTE">
+          Vaga de curso profissionalizante
+        </option>
+        <option value="VAGACONTRATURNO">Vaga de contra turno</option>
+        <option value="VAGAOFICINAS">Vaga Oficinas</option>
+        <option value="VAGASOCIAL">Vaga Social</option>
+      </select>
 
-                <div class="card-columns " *ngFor='let tema of listaTemas'>
-                    <div class=" card text-center " *ngFor='let item of tema.postagem'>
-                        <div class="card-body ">
-                            <h5 class="card-title m-0 ">{{item.titulo}}</h5>
-                            <p class="card-text mt-3 ">{{item.texto}}</p>
-                            <p class="card-text "><small class="text-muted ">
-                            {{item.data | date:'dd/MM/yyyy'}} às {{item.data | date:'HH:mm'}}
-                          </small></p>
+      <div class="card-columns " *ngFor='let postagem of listaPostagens'>
+        <div class=" card text-center " *ngIf="postagem.tipoPostagem == selectPost">
+          <div class="card-body ">
+            <h5 class="card-title m-0 ">{{postagem.titulo}}</h5>
+            <p class="card-text mt-3 ">{{postagem.descricao}}</p>
+            <p class="card-text "><small class="text-muted ">
+                {{postagem.data | date:'dd/MM/yyyy'}} às {{postagem.data | date:'HH:mm'}}
+              </small></p>
 
-                            <p class="card-text "><small class="text-muted ">
-                            by: {{item.usuario.nome}}
-                          </small></p>
+            <p class="card-text "><small class="text-muted ">
+                by: {{postagem.user.razaoSocial}}
+              </small></p>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-      -->
+      </div>
+      <!-- </div> -->
+    </div>
+
   </div>
 </div>
 
 <!-- Modal -->
 
-<div
-  class="modal fade"
-  id="novaPostagem"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="TituloModalCentralizado"
-  aria-hidden="true"
->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Fechar"
-        >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -209,23 +175,13 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="titulo">Titulo:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="titulo"
-            placeholder="Digite o Titulo"
-            [(ngModel)]="postagem.titulo"
-          />
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o Titulo"
+            [(ngModel)]="postagem.titulo" />
         </div>
 
         <div class="form-group">
           <label for="demanda">Demanda:</label>
-          <select
-            class="form-control"
-            name="demanda"
-            id="demanda"
-            (change)="tipoDemanda($event)"
-          >
+          <select class="form-control" name="demanda" id="demanda" (change)="tipoDemanda($event)">
             <option value="">Selecione uma demanda:</option>
             <option value="OFERTA">Oferta</option>
             <option value="PROCURA">Procura</option>
@@ -234,12 +190,7 @@
 
         <div class="form-group">
           <label for="categoria">Categoria</label>
-          <select
-            class="form-control"
-            name="categoria"
-            id="categoria"
-            (change)="tipoPostagem($event)"
-          >
+          <select class="form-control" name="categoria" id="categoria" (change)="tipoPostagem($event)">
             <option value="">Selecione uma categoria:</option>
             <option value="DOACAODEROUPA">Doação de roupas</option>
             <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
@@ -255,36 +206,19 @@
 
         <div class="form-group">
           <label for="texto">Texto:</label>
-          <textarea
-            class="form-control"
-            name="texto"
-            id="texto"
-            rows="3"
-            [(ngModel)]="postagem.descricao"
-          ></textarea>
+          <textarea class="form-control" name="texto" id="texto" rows="3" [(ngModel)]="postagem.descricao"></textarea>
         </div>
 
         <div class="form-group">
           <label for="localidade">Localidade:</label>
-          <input
-            class="form-control"
-            type="text"
-            name="localidade"
-            id="localidade"
-            [(ngModel)]="postagem.localidade"
-          />
+          <input class="form-control" type="text" name="localidade" id="localidade" [(ngModel)]="postagem.localidade" />
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">
           Cancelar
         </button>
-        <button
-          type="button"
-          class="btn btn-success"
-          (click)="publicar()"
-          data-dismiss="modal"
-        >
+        <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">
           Publicar
         </button>
       </div>
