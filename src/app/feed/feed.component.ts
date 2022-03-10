@@ -30,6 +30,9 @@ export class FeedComponent implements OnInit {
 
   tipoPost: string
   demanda: string
+  selectPost: string
+
+  
 
 
   constructor(
@@ -55,6 +58,7 @@ export class FeedComponent implements OnInit {
     })
   }
 
+
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
       this.user = resp
@@ -72,6 +76,10 @@ export class FeedComponent implements OnInit {
 
   tipoPostagem(event:any) {
     this.tipoPost = event.target.value
+  }
+
+  select(event:any) {
+    this.selectPost = event.target.value
   }
 
   tipoDemanda(event:any) {
