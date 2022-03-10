@@ -1,3 +1,4 @@
+import { Credentials } from './../model/Credentials';
 import { User } from './../model/User';
 import { AuthService } from './../service/auth.service';
 import { PostagemService } from './../service/postagem.service';
@@ -13,6 +14,10 @@ import { Postagem } from '../model/Postagem';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+
+  foto = environment.foto
+
+  credentials: Credentials = new Credentials()
 
   postagem: Postagem = new Postagem()
   postagemEdit: Postagem = new Postagem()
@@ -88,12 +93,12 @@ export class FeedComponent implements OnInit {
       this.listarPostagens()
     })
   }
-  
+
   atualizar(){
     this.postagemEdit.demanda = this.demanda
     this.postagemEdit.tipoPostagem = this.tipoPost
 
-  
+
     this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
       this.postagemEdit = resp
       alert('Postagem atualizada com sucesso!')
