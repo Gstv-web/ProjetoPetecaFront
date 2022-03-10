@@ -10,23 +10,18 @@
     /* box-sizing: border-box; */
     padding: 0;
     border: none;
+    max-width: 100%;
+}
+
+img {
+  height: 60%;
+  width: 60%;
 }
 
 
 /*
-#sobre-nos-area {
-    background-color: #FFFDF7;
-}
-*/
-
-.logo-peteca {
-    width: 50vw;
-    height: 50vh;
-    object-fit: contain;
-}
 
 
-/*
 #nosso-time-titulo {
     background-color: #856AB4;
     width: auto;
@@ -45,10 +40,10 @@
     margin: 05%;
     overflow-x: 05%;
 }
-*/
 
 
-/*
+
+
 #depoimento-titulo {
     width: auto;
     height: auto;
@@ -66,10 +61,10 @@
     margin: 05%;
     overflow-x: 05%;
 }
-*/
 
 
-/*
+
+
 #time-area {
     background-color: #856AB4;
     justify-content: auto;
@@ -85,10 +80,10 @@
     color: #000;
     align-items: center;
 }
-*/
 
 
-/*
+
+
 depoimento-area {
     justify-content: auto;
     width: auto;
@@ -103,10 +98,10 @@ depoimento-area {
     color: black;
     align-items: center;
 }
-*/
 
 
-/*
+
+
 #nosso-time-titulo {
     color: #FFFDF7;
     font-family: Poppins;
@@ -124,10 +119,10 @@ depoimento-area {
     justify-content: center;
     align-items: center;
 }
-*/
 
 
-/*
+
+
 element {
     background-color: #856AB4;
     padding: 20%;
@@ -142,10 +137,10 @@ element {
     justify-content: center;
     justify-self: center;
 }
-*/
 
 
-/*
+
+
 #descricao-element {
     text-align: justify;
     background-color: none;
@@ -169,18 +164,18 @@ element {
     color: #fffdf7;
     align-items: center;
 }
-*/
 
 
-/*
+
+
 .container-d-flex-md-3-col-3 {
     background-color: #856AB4;
     justify-content: center;
 }
-*/
 
 
-/*
+
+
 #img-element {
     display: inline-block;
     align-items: center;
@@ -194,10 +189,10 @@ element {
     border: auto;
     align-items: center;
 }
-*/
 
 
-/*
+
+
 #descricao-element {
     color: #FFFDF7;
 }
@@ -212,10 +207,17 @@ h4 {
     color: #FFFDF7;
     font: 900px;
 }
-*/
 
+/*
 
 /* CARROSSEL*/
+
+#texto-carrossel {
+  font-size: 200px;
+  font-weight:900;
+  color: #F5952C;
+  text-align: center;
+}
 
 .img1 {
     background-image: url("../../assets/img/carrossel-01.png");
@@ -253,3 +255,21 @@ li {
 
 
 /*FIM CARROSSEL*/
+
+/*DEPOIMENTOS*/
+
+#depoimentos {
+  background-color: #00C2E0;
+  color: white;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+h4 {
+  font-weight: bold;
+  color: white;
+}
+
+/*FIM - DEPOIMENTOS*/

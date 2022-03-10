@@ -1,3 +1,4 @@
+import { Credentials } from './../model/Credentials';
 import { User } from './../model/User';
 import { AuthService } from './../service/auth.service';
 import { PostagemService } from './../service/postagem.service';
@@ -14,8 +15,15 @@ import { Postagem } from '../model/Postagem';
 })
 export class FeedComponent implements OnInit {
 
+  foto = environment.foto
+
+  credentials: Credentials = new Credentials()
+
   postagem: Postagem = new Postagem()
+  postagemEdit: Postagem = new Postagem()
+  postagemDelete: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  idPost: number
 
   idUser = environment.userId
   user: User = new User()
@@ -53,6 +61,15 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  findByIdPostagem (id:number){
+    console.log(id)
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      this.postagemEdit = resp
+      this.postagemDelete = resp
+    })
+  }
+
   tipoPostagem(event:any) {
     this.tipoPost = event.target.value
   }
@@ -68,6 +85,7 @@ export class FeedComponent implements OnInit {
     this.postagem.tipoPostagem = this.tipoPost
     this.postagem.demanda = this.demanda
 
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
       this.postagem = resp;
       alert('Postagem efetuada')
@@ -75,6 +93,28 @@ export class FeedComponent implements OnInit {
       this.listarPostagens()
     })
   }
-  
+
+  atualizar(){
+    this.postagemEdit.demanda = this.demanda
+    this.postagemEdit.tipoPostagem = this.tipoPost
+
+
+    this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
+      this.postagemEdit = resp
+      alert('Postagem atualizada com sucesso!')
+      this.listarPostagens()
+      this.router.navigate(['/feed'])
+    })
+  }
+
+  apagar (){
+    this.idPost = this.postagemDelete.id
+    console.log(this.idPost)
+    this.postagemService.deletePostagem(this.idPost).subscribe(() => {
+      alert ('Postagem apagada com sucesso!')
+      this.listarPostagens()
+      this.router.navigate(['/feed'])
+    })
+  }
 
 }
