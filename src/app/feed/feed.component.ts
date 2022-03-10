@@ -1,3 +1,4 @@
+import { Credentials } from './../model/Credentials';
 import { User } from './../model/User';
 import { AuthService } from './../service/auth.service';
 import { PostagemService } from './../service/postagem.service';
@@ -14,6 +15,10 @@ import { Postagem } from '../model/Postagem';
 })
 export class FeedComponent implements OnInit {
 
+  foto = environment.foto
+
+  credentials: Credentials = new Credentials()
+
   postagem: Postagem = new Postagem()
   postagemEdit: Postagem = new Postagem()
   postagemDelete: Postagem = new Postagem()
@@ -25,6 +30,9 @@ export class FeedComponent implements OnInit {
 
   tipoPost: string
   demanda: string
+  selectPost: string
+
+  
 
 
   constructor(
@@ -50,6 +58,7 @@ export class FeedComponent implements OnInit {
     })
   }
 
+
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
       this.user = resp
@@ -67,6 +76,10 @@ export class FeedComponent implements OnInit {
 
   tipoPostagem(event:any) {
     this.tipoPost = event.target.value
+  }
+
+  select(event:any) {
+    this.selectPost = event.target.value
   }
 
   tipoDemanda(event:any) {
@@ -88,12 +101,12 @@ export class FeedComponent implements OnInit {
       this.listarPostagens()
     })
   }
-  
+
   atualizar(){
     this.postagemEdit.demanda = this.demanda
     this.postagemEdit.tipoPostagem = this.tipoPost
 
-  
+
     this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
       this.postagemEdit = resp
       alert('Postagem atualizada com sucesso!')
