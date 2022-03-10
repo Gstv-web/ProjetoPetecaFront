@@ -66,14 +66,14 @@
                         </div>
 
                         <!--Titulo, Demanda e Categoria-->
-                        <div class='row d-flex col-md-12 justify-content-center mt-5'>
+                        <div class='row d-flex col-md-12 justify-content-between mt-5'>
 
-                            <h5 class="card-title mr-5">Titulo: {{ item.titulo }}</h5>
+                            <h5 class="card-title">Titulo: {{ item.titulo }}</h5>
 
                             <small class="ml-3">Demanda: {{item.demanda}}
                                 </small>
 
-                            <small class="ml-3">Categoria:{{ item.tipoPostagem }}
+                            <small class="ml-3">{{ item.tipoPostagem }}
                                     </small>
                         </div>
 
@@ -85,7 +85,7 @@
                         <!--Localidade e botão-->
                         <p>Localidade: {{item.localidade}}</p>
                         <div class="d-flex row justify-content-end mr-2">
-                            <button type="button" class="btn btn-success">Quero</button>
+                            <button type="button" class="btn btn-success">{{ item.demanda == "OFERTA" ? 'Quero ajuda!' : 'Quero ajudar!' }}</button>
                         </div>
 
                     </div>
@@ -109,8 +109,8 @@
               </small>
                         </p>
 
-                        <a [routerLink]="[ ' /postagem-edit ', item.id]" class="text-info mr-3" href="">Editar</a>
-                        <a [routerLink]="[ '/postagem-delete ', item.id]" class="text-danger" href="">Apagar</a>
+                        <a data-toggle="modal" data-target="#editarPostagem" class="text-info mr-3" (click)="findByIdPostagem(item.id)">Editar</a>
+                        <a data-toggle="modal" data-target="#deletarPostagem" class="text-danger" (click)="findByIdPostagem(item.id)">Apagar</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal NOVA POSTAGEM-->
 
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -162,7 +162,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true" data-dismiss="modal">&times;</span>
         </button>
             </div>
 
@@ -177,7 +177,7 @@
                     <select class="form-control" name="demanda" id="demanda" (change)="tipoDemanda($event)">
             <option value="">Selecione uma demanda:</option>
             <option value="OFERTA">Oferta</option>
-            <option value="PROCURA">Procura</option>
+            <option value="PPROCURA">Procura</option>
           </select>
                 </div>
 
@@ -217,4 +217,186 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- FIM MODAL NOVA POSTAGEM -->
+
+<!-- Modal EDITAR POSTAGEM -->
+
+<div
+  class="modal fade"
+  id="editarPostagem"
+  tabindex="-1 "
+  role="dialog "
+  aria-labelledby="TituloModalCentralizado "
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado ">Editar Postagem</h5>
+        <button
+          type="button "
+          class="close"
+          data-dismiss="modal "
+          aria-label="Fechar "
+        >
+          <span aria-hidden="true " data-dismiss="modal">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo ">Titulo:</label>
+          <input
+            type="text "
+            class="form-control"
+            id="titulo "
+            placeholder="Digite o Titulo "
+            [(ngModel)]="postagemEdit.titulo"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="demanda">Demanda:</label>
+          <select
+            class="form-control"
+            name="demanda"
+            id="demanda"
+            (change)="tipoDemanda($event)"
+          >
+            <option value="">Selecione uma demanda:</option>
+            <option value="OFERTA">Oferta</option>
+            <option value="PPROCURA">Procura</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select
+            class="form-control"
+            name="categoria"
+            id="categoria"
+            (change)="tipoPostagem($event)"
+          >
+            <option value="">Selecione uma categoria:</option>
+            <option value="DOACAODEROUPA">Doação de roupas</option>
+            <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
+            <option value="VAGACURSOLIVRE">Vaga de curso livre</option>
+            <option value="VAGACURSOPROFISSIONALIZANTE">
+              Vaga de curso profissionalizante
+            </option>
+            <option value="VAGACONTRATURNO">Vaga de contra turno</option>
+            <option value="VAGAOFICINAS">Vaga Oficinas</option>
+            <option value="VAGASOCIAL">Vaga Social</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="texto ">Texto:</label>
+          <textarea
+            class="form-control"
+            name="texto "
+            id="texto "
+            rows="3 "
+            [(ngModel)]="postagemEdit.descricao"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="localidade">Localidade:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="localidade"
+            id="localidade"
+            [(ngModel)]="postagemEdit.localidade"
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="atualizar()"
+          data-dismiss="modal"
+        >
+          Atualizar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM MODAL EDITAR POSTAGEM -->
+
+<!-- Modal DELETAR POSTAGEM -->
+
+<div
+  class="modal fade"
+  id="deletarPostagem"
+  tabindex="-1 "
+  role="dialog "
+  aria-labelledby="TituloModalCentralizado "
+  aria-hidden="true "
+>
+  <div class="modal-dialog modal-dialog-centered" role="document ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado ">Deletar Postagem</h5>
+        <button
+          type="button "
+          class="close"
+          data-dismiss="modal "
+          aria-label="Fechar "
+        >
+          <span aria-hidden="true" data-dismiss="modal">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo ">Titulo:</label>
+          <p>{{ postagem.titulo }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="demanda">Demanda:</label>
+          <p>{{ postagem.demanda }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <p>{{ postagem.tipoPostagem }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="texto ">Texto:</label>
+          <p>{{ postagem.descricao }}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="localidade">Localidade:</label>
+          <p>{{ postagem.localidade }}</p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="apagar()"
+          data-dismiss="modal"
+        >
+          Apagar
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
