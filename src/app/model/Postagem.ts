@@ -11,6 +11,7 @@ export class Postagem {
   public visualizacao:string
   public user:User
   public data:Date
+  public foto: string
 
 }
 
