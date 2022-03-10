@@ -46,7 +46,7 @@
 
       <a
         class="nav-link text-secondary font-weight-bold"
-        id="nav-contact-tab"
+        id="postagemTema"
         data-toggle="tab"
         href="#postagemTema"
         role="tab"
@@ -67,12 +67,12 @@
       aria-labelledby="todasPostagens-tab"
     >
       <!--Todas as Postagens-->
-      <div class="card">
-        <div class="card text-center" *ngFor="let item of listaPostagens">
+      <div class="d-flex flex-column align-items-center mx-auto justify-content-center col-md-9">
+        <div class="card text-center mb-3" *ngFor="let item of listaPostagens">
           <div class="card-body">
 
             <!--Imagem, Razão Social e Data-->
-            <div d-flex col-12>
+            <div class='d-flex col-12'>
               <img src="{{foto}}" class="rounded-circle w-25" alt="fotoDaEmpresa">
 
               <p class="card-text">
@@ -100,7 +100,7 @@
               <div>
                 Descrição:
                 <br>
-                <textarea class="card-text mt-3" cols="64" rows="5" placeholder="Descrição">{{ item.descricao }}</textarea>
+                <pre >{{ item.descricao }}</pre>
               </div>
 
             <!--Localidade-->
@@ -156,29 +156,41 @@
       </div>
     </div>
 
-    <!--Postagem Tema
-        <div class="tab-pane fade " id="postagemTema " role="tabpanel " aria-labelledby="postagemTema-tab ">
-            <div class="tab-pane fade " id="minhasPostagens " role="tabpanel " aria-labelledby="minhasPostagens-tab ">
+    <!-- Postagem Tema -->
+        <div class="tab-pane fade " id="postagemTema" role="tabpanel " aria-labelledby="postagemTema-tab">
+            <!-- <div class="tab-pane fade " id="minhasPostagens " role="tabpanel " aria-labelledby="minhasPostagens-tab "> -->
+              <select name="tipo" id="tipo" (change)="select($event)">
+                <option value="">Selecione uma categoria:</option>
+                <option value="DOACAODEROUPA">Doação de roupas</option>
+                <option value="DOACAODEALIMENTOS">Doação de alimentos</option>
+                <option value="VAGACURSOLIVRE">Vaga de curso livre</option>
+                <option value="VAGACURSOPROFISSIONALIZANTE">
+                  Vaga de curso profissionalizante
+                </option>
+                <option value="VAGACONTRATURNO">Vaga de contra turno</option>
+                <option value="VAGAOFICINAS">Vaga Oficinas</option>
+                <option value="VAGASOCIAL">Vaga Social</option>
+              </select>
 
-                <div class="card-columns " *ngFor='let tema of listaTemas'>
-                    <div class=" card text-center " *ngFor='let item of tema.postagem'>
+                <div class="card-columns " *ngFor='let postagem of listaPostagens'>
+                    <div class=" card text-center " *ngIf="postagem.tipoPostagem == selectPost">
                         <div class="card-body ">
-                            <h5 class="card-title m-0 ">{{item.titulo}}</h5>
-                            <p class="card-text mt-3 ">{{item.texto}}</p>
+                            <h5 class="card-title m-0 ">{{postagem.titulo}}</h5>
+                            <p class="card-text mt-3 ">{{postagem.descricao}}</p>
                             <p class="card-text "><small class="text-muted ">
-                            {{item.data | date:'dd/MM/yyyy'}} às {{item.data | date:'HH:mm'}}
+                            {{postagem.data | date:'dd/MM/yyyy'}} às {{postagem.data | date:'HH:mm'}}
                           </small></p>
 
                             <p class="card-text "><small class="text-muted ">
-                            by: {{item.usuario.nome}}
+                            by: {{postagem.user.razaoSocial}}
                           </small></p>
 
                         </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
-      -->
+     
   </div>
 </div>
 
