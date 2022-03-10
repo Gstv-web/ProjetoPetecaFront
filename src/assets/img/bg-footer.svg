@@ -1,0 +1,28 @@
+<svg id="bg-footer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3466.953" height="442.496" viewBox="0 0 3466.953 442.496">
+  <defs>
+    <filter id="Caminho_75" x="0" y="0" width="3466.953" height="360" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_16" data-name="Grupo 16">
+    <g id="Footer">
+      <g data-type="innerShadowGroup">
+        <path id="Caminho_75-2" data-name="Caminho 75" d="M240.155,0H3278.564c132.634,0,188.389,56.961,188.389,127.225V360H0V127.225C0,56.961,107.521,0,240.155,0Z" fill="#fffdf7"/>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Caminho_75)">
+          <path id="Caminho_75-3" data-name="Caminho 75" d="M240.155,0H3278.564c132.634,0,188.389,56.961,188.389,127.225V360H0V127.225C0,56.961,107.521,0,240.155,0Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <path id="Caminho_94" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(582.059 197.184)" fill="#ffc933"/>
+  <path id="Caminho_94-2" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(5.647 197.184)" fill="#f5952c"/>
+  <path id="Caminho_94-3" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(-570.765 197.184)" fill="#f2709e"/>
+  <path id="Caminho_94-4" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(-1147.177 197.184)" fill="#856ab4"/>
+  <path id="Caminho_94-5" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(-1723.589 197.184)" fill="#00c2e0"/>
+  <path id="Caminho_94-6" data-name="Caminho 94" d="M2884.894,245.313H2300V98.054s47.123-81.343,314.143-77.136,270.75,77.136,270.75,77.136Z" transform="translate(-2300 197.184)" fill="#70c162"/>
+</svg>
