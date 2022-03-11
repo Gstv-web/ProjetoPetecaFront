@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+.inicio {
+  position: fixed;
+  top: 25px;
+  left: 100px;
+  color: #F5952C;
+  font-weight: bold;
+}
+
 .topo {
   background-color: #00C2E0;
   height: 250px;
