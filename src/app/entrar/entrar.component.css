@@ -1,5 +1,5 @@
 #bg {
-  background-image: url("../../assets/img/bg-login@2x.png");
+  background-image: url("../../assets/img/Login@2x.png");
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,6 +8,26 @@
   box-shadow: 0 3px 6px 0 #00000029;
   background-color: #fffdf7bf;
 }
+
+.inicio {
+    position: fixed;
+    top: 25px;
+    right: 100px;
+    color: #F5952C;
+    background: white;
+    border: 1px solid #F5952C;
+    font-weight: bold;
+  }
+  
+  .inicio:hover {
+    position: fixed;
+    top: 25px;
+    right: 100px;
+    color: white;
+    background: #F5952C;
+    border: 1px solid white;
+    font-weight: bold;
+  }
 
 #icon {
   border: transparent;
@@ -52,7 +72,8 @@
     color: #000;
     font-weight: 600;
 }
-h1{
+
+h1 {
   font-weight: 900;
   text-align: center;
   color: #000;
@@ -63,7 +84,7 @@ h1{
     border-radius: 7px;
     background-color: #00c2e0;
     box-shadow: 0 3px 6px 0 #00000029;
-    background-color: #fffdf7bf;
+    background-color: white;
     border: transparent;
 }
 
@@ -78,7 +99,7 @@ h1{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: #bdc3c7;
+    color: #868788;
 }
 
 .facebook:hover {
@@ -94,7 +115,7 @@ h1{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: #bdc3c7;
+    color: #868788;
 }
 
 .google:hover {
@@ -110,7 +131,7 @@ h1{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: #bdc3c7;
+    color: #868788;
 }
 
 .linkedin:hover {
