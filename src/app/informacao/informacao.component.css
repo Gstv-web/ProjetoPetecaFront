@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.topo {
+  background-color: #00C2E0;
+  height: 250px;
+}
+
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
@@ -37,11 +42,11 @@ body {
 }
 
 .container.left {
-  left: 0;
+  left: -254px;
 }
 
 .container.right {
-  left: 50%;
+  left: 254px;
 }
 
 .container::after {
@@ -104,7 +109,6 @@ body {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-/*   background: #F5952C; */
   border: 2px solid #00C2E0;
   border-radius: 40px;
   text-align: center;
