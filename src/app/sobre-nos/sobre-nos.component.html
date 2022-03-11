@@ -2,10 +2,10 @@
   <div class="row navegacao">
     <nav class="d-block m-0 ml-auto">
       <ul class="d-flex justify-content-around align-items-center">
-        <li class="mr-4">Sobre nós</li>
-        <li class="mr-4">Nosso time</li>
-        <li class="mr-4">Depoimentos</li>
-        <li class="mr-4"><a routerLink="/informacao"></a>Informativo</li>
+        <li class="mr-4"><a href="#sobre-nos">Sobre nós</a></li>
+        <li class="mr-4"><a href="#nosso-time">Nosso time</a></li>
+        <li class="mr-4"><a href="#depoimentos">Depoimentos</a></li>
+        <li class="mr-4"><a routerLink="/informacao">Informativo</a></li>
         <li class="mr-4"><a routerLink="/entrar">Login</a></li>
         <li class="mr-4"><a routerLink="/cadastrar">Cadastro</a></li>
       </ul>
@@ -93,8 +93,8 @@
     <h1 class="d-flex my-4 text">Encontre ou dê uma mãozinha</h1>
 
     <div class="row">
-      <button class="rounded-pill text-white" id="botao-laranja">Oferte</button>
-      <button class="rounded-pill text-white" id="botao-azul">Procure</button>
+      <a routerLink="/feed"><button class="rounded-pill text-white" id="botao-laranja">Oferte</button></a>
+      <a routerLink="/feed"><button class="rounded-pill text-white" id="botao-azul">Procure</button></a>
     </div>
   </div>
 </div>
@@ -196,7 +196,7 @@
 <div class="row" id="depoimentos"></div>
 <div class="">
   <nav class="d-flex-md-3">
-    <h2 class="text-center col -12 my-5">Depoimentos</h2>
+    <h2 class="text-center col-12 my-5 w-100">Depoimentos</h2>
 
     <div class="row d-flex justify-content-around my-5 mx-2">
       <div class="d-flex-md-3 col-4">
@@ -233,7 +233,7 @@
         </h4>
         <p
           class="row col-8 justify-content-center text-justify text-dark"
-          id="depoimento-element "
+          id="depoimento-element"
         >
           Responder à demandas da comunidade é um compromisso assumido pela nossa empresa. Sendo assim, por meio do PETECA fomos capazes de devolver ao território onde nos instalamos parte do que produzimos.
         </p>
@@ -253,7 +253,7 @@
         </h4>
         <p
           class="row col-8 justify-content-center text-justify text-dark"
-          id="depoimento-element "
+          id="depoimento-element"
         >
           Fui usuária do CRAS Capão e senti os efeitos do PETECA na vida de nós moradores da região. Com o PETECA a Assistente Social conseguiu para nós um contraturno para as crianças e roupas para os homens que moravam no bairro.
         </p>

@@ -1,10 +1,46 @@
 #bg {
-    background-image: url(../../assets/img/bgLogin.png);
-    background-size: cover;
+  background-image: url("../../assets/img/bg-login@2x.png");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: transparent;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7bf;
+}
+
+#icon {
+  border: transparent;
+  box-shadow: 0 3px 6px 0 #00000029;
+}
+
+#usuario {
+  border-radius: 35.5px;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7c2;
+  border: transparent;
+  font-style: italic;
+  font-size: small;
+}
+
+#senha {
+  border-radius: 35.5px;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7c2;
+  border: transparent;
+  font-style: italic;
+  font-size: small;
 }
 
 .btnEntrar {
+    font-weight: 600;
     background-color: #F5952C;
+    border: transparent;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+    align-content: center;
 }
 
 .hr1::after {
@@ -13,13 +49,22 @@
     position: relative;
     top: -0.9em;
     padding: 0 0.3em;
-    background: #F8F9FA;
+    color: #000;
+    font-weight: 600;
+}
+h1{
+  font-weight: 900;
+  text-align: center;
+  color: #000;
 }
 
 #form {
     padding: 0 70px !important;
-    border: 1px solid #00C2E0;
-    border-radius: 2%;
+    border-radius: 7px;
+    background-color: #00c2e0;
+    box-shadow: 0 3px 6px 0 #00000029;
+    background-color: #fffdf7bf;
+    border: transparent;
 }
 
 .link-midia-social:not(:first-child){
