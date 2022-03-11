@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Credentials } from '../model/Credentials';
 
 @Component({
   selector: 'app-informacao',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InformacaoComponent implements OnInit {
 
-  constructor() { }
+  credentials: Credentials = new Credentials()
+
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
