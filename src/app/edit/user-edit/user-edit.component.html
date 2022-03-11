@@ -1,0 +1,76 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <h1 class="text-center text-secondary">Editar Perfil</h1>
+
+        </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-7">
+
+            <form>
+
+                <div class="form-group">
+                    <!-- <label for="nome">Razão Social:</label> -->
+                    <input [(ngModel)]="user.razaoSocial" class="form-control rounded-pill" type="text" name="nome"
+                        id="nome" placeholder="Razão Social">
+                </div>
+
+                <div class="form-group">
+                    <!-- <label for="usuario">Usuario:</label> -->
+                    <input [(ngModel)]="user.email" class="form-control rounded-pill" type="text" name="usuario"
+                        id="usuario" placeholder="E-mail (email@email.com)">
+                </div>
+
+                <div class="form-group">
+                    <!-- <label for="foto">Foto:</label> -->
+                    <input [(ngModel)]="user.foto" class="form-control rounded-pill" type="text" name="foto" id="foto"
+                        placeholder="Coloque um link para sua foto">
+                </div>
+
+                <div class="form-group">
+                    <!-- <label for="senha">Senha:</label> -->
+                    <input (input)="confirmPassword($event)" class="form-control rounded-pill" type="password" name="senha"
+                        id="senha" placeholder="Senha">
+                </div>
+
+                <div class="form-group">
+                    <!-- <label for="confSenha">Confirmar Senha:</label> -->
+                    <input [(ngModel)]="user.senha" class="form-control rounded-pill" type="password" name="confSenha"
+                        id="confSenha" placeholder="Confirme sua Senha">
+                </div>
+
+
+                <div class="form-group">
+                    <!-- <label for="contato">Contato:</label> -->
+                    <input [(ngModel)]='user.contato' class="form-control rounded-pill" type="text" name="contato"
+                        id="contato" placeholder="Contato">
+                </div>
+
+
+                <div class="form-group">
+                    <!-- <label for="confSenha">Endereço:</label> -->
+                    <input class="form-control rounded-pill" [(ngModel)]='user.endereco' type="text" name="endereco"
+                        id="endereco" placeholder="Endereço">
+                </div>
+
+                <div class="w-50 mx-auto mt-4 d-flex justify-content-around">
+
+                    <button class="btn btn-outline-danger mr-3" routerLink="/feed">Cancelar</button>
+                    <button class="btn btn-outline-success" (click)="edit()">Atualizar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

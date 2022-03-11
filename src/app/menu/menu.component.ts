@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   razaoSocial = environment.razaoSocial
+  idUser = environment.userId
 
   constructor(
     private router: Router

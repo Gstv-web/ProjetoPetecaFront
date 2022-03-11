@@ -16,6 +16,7 @@ import { Postagem } from '../model/Postagem';
 export class FeedComponent implements OnInit {
 
   foto = environment.foto
+  razaoSocial = environment.razaoSocial
 
   credentials: Credentials = new Credentials()
 
@@ -31,8 +32,7 @@ export class FeedComponent implements OnInit {
   tipoPost: string
   demanda: string
   selectPost: string
-
-  
+  fotoUser: string
 
 
   constructor(
@@ -87,6 +87,7 @@ export class FeedComponent implements OnInit {
   }
 
   publicar(){
+    this.fotoUser = this.user.foto
     this.user.userId = this.idUser
     this.postagem.user = this.user
 
