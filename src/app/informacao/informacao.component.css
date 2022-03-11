@@ -9,6 +9,18 @@
   top: 25px;
   left: 100px;
   color: #F5952C;
+  background: white;
+  border: 1px solid #F5952C;
+  font-weight: bold;
+}
+
+.inicio:hover {
+  position: fixed;
+  top: 25px;
+  left: 100px;
+  color: white;
+  background: #F5952C;
+  border: 1px solid white;
   font-weight: bold;
 }
 
