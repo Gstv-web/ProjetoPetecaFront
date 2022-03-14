@@ -1,6 +1,6 @@
 <div class="container-fluid" id="navbar">
   <div class="row navegacao">
-    <nav class="d-block m-0 ml-auto">
+    <nav class="d-block m-0 ml-auto w-4">
       <ul class="d-flex justify-content-around align-items-center">
 
         <li class="mr-4">
@@ -22,11 +22,11 @@
             <a class="dropdown-item" routerLink="/informacao">Estatística</a>
           </div>
         </li>
-        
+
         <li class="mr-4">
           <a routerLink="/entrar">Login</a>
         </li>
-        
+
         <li class="mr-4">
           <a routerLink="/entrar">Cadastro</a>
         </li>
@@ -58,7 +58,7 @@
     </ol>
 
     <div class="carousel-inner">
-      
+
       <div class="carousel-item active">
         <!-- imagens carrossel -->
         <div class="img1 d-block w-100">
@@ -67,7 +67,7 @@
           </h6>
         </div>
       </div>
-      
+
       <div class="carousel-item">
         <div class="img2 d-block w-100">
           <h6 class="has-text-align-left" id="texto-carrossel">
@@ -117,7 +117,7 @@
 
   <div class="" id="maozinha">
     <h1 class="d-flex my-4 text">Encontre ou dê uma mãozinha</h1>
-    
+
     <div class="row">
       <a routerLink="/feed"><button class=" btn rounded-pill text-white botao-laranja">Oferte</button></a>
       <a routerLink="/feed"><button class="btn rounded-pill text-white botao-azul">Procure</button></a>
@@ -223,7 +223,7 @@
       <h2 class="text-center col-12 my-5 w-100">Depoimentos</h2>
 
       <div class="col-md-12 d-flex">
-        
+
         <!-- Sara Bastos -->
         <div class="mb-3" style="max-width: 540px;">
           <div class="row no-gutters">
@@ -237,8 +237,8 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                <p class="card-text text-justify">O PETECA oportunizou a nossa instituição a viabilidade de um atendimento agilizado, de forma a possibilitar a resolução de problemas que demandam soluções rápidas.</p>
+                <p class="card-text text-justify"><span id="aspas">❞</span>
+                  O PETECA oportunizou a nossa instituição a viabilidade de um atendimento agilizado, de forma a possibilitar a resolução de problemas que demandam soluções rápidas.</p>
                 <hr class="my-2">
                 <p class="card-text"><small class="text-muted">- Sara Bastos</small></p>
               </div>
@@ -259,8 +259,8 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <p class="text-black fs-16 mr-1 mt-3"><i class="fa fa-quote-right" aria-hidden="true"></i></p>
-                <p class="card-text text-justify">Responder à demandas da comunidade é um compromisso assumido pela nossa empresa. Sendo assim, por meio do PETECA fomos capazes de devolver ao território onde nos instalamos parte do que produzimos.</p>
+                <p class="card-text text-justify"><span id="aspas">❞</span>
+                  Responder à demandas da comunidade é um compromisso assumido pela nossa empresa. Sendo assim, por meio do PETECA fomos capazes de devolver ao território onde nos instalamos parte do que produzimos.</p>
                 <hr class="my-2">
                 <p class="card-text"><small class="text-muted">- Pey Jon Ming</small></p>
               </div>
@@ -281,8 +281,8 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <p class="text-black fs-16 mr-1 mt-3"><i class="fa fa-quote-right" aria-hidden="true"></i></p>
-                <p class="card-text text-justify">Fui usuária do CRAS Capão e senti os efeitos do PETECA na vida de nós moradores da região. Com o PETECA, a Assistente Social conseguiu para nós um contraturno para as crianças e roupas para os homens que moravam no bairro.</p>
+                <p class="card-text text-justify"><span id="aspas">❞</span>
+              Fui usuária do CRAS Capão e senti os efeitos do PETECA na vida de nós moradores da região. Com o PETECA, a Assistente Social conseguiu para nós um contraturno para as crianças e roupas para os homens que moravam no bairro.</p>
                 <hr class="my-2">
                 <p class="card-text"><small class="text-muted">- Ruth Castro</small></p>
               </div>
@@ -293,11 +293,12 @@
 
 <!--Contato-->
 
-<section class="row contato-area bg-light m-0 py-4 vh-10" id="contato">
+<section class="row contato-area bg-light m-0 py-4 vh-10 justif" id="contato">
   <div class="container">
-    <div class="row">
+    <div class="d-flex justify-content-around">
 
       <div class="col-md-5 contato-area-left text-left">
+
         <h1 style="font-weight: 700">CONTATO</h1>
         <p class="pt-3 pb-3 text-dark text-justify">
           Olá, caso tenha gostado e se interessado no projeto, mande uma
@@ -311,6 +312,7 @@
         <p>Telefone: (00) 0000-0000</p>
       </div>
 
+      <!-- FORMULÁRIO -->
       <div class="col-md-7 contato-area-right bg-light">
         <form class="row g-3 p-5 bg-light">
           <div class="col-md-12 d-flex">
@@ -321,7 +323,7 @@
               <input
                 type="text"
                 id="nome"
-                class="form-control pl-2"
+                class="form-control rounded-pill pl-2"
                 onkeyup="valorNome()"
                 placeholder="Nome"
               />
@@ -334,7 +336,7 @@
               <input
                 type="text"
                 id="sobrenome"
-                class="form-control pl-2"
+                class="form-control rounded-pill pl-2"
                 onkeyup="valorSobrenome()"
                 placeholder="Sobrenome"
               />
@@ -348,7 +350,7 @@
             <input
               type="email"
               id="email"
-              class="form-control pl-2"
+              class="form-control rounded-pill pl-2"
               placeholder="E-mail"
             /><br />
           </div>
@@ -374,6 +376,8 @@
             <button class="btn rounded-pill mt-3 botao-laranja text-white">
               Enviar
             </button>
+
+
           </div>
         </form>
       </div>

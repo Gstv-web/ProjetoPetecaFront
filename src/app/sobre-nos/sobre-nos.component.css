@@ -38,6 +38,7 @@ a {
   font-family: 'Poppins';
   font-weight: 600;
   color: white;
+  padding: 0;
 }
 
 /* Logo */
@@ -51,6 +52,7 @@ a {
   height: 60px;
   border: transparent;
   background-color: #f5952c;
+  box-shadow: 3px 3px 3px 0px rgba(105, 105, 105, 0.493);
 }
 
 .botao-azul {
@@ -58,7 +60,7 @@ a {
   height:60px;
   border: transparent;
   background-color: #00C2E0;
-
+  box-shadow: 3px 3px 3px 0px rgba(105, 105, 105, 0.493);
 }
 
 #img-element {
@@ -104,18 +106,17 @@ h1 {
   color: #f5942c8c;
   text-align: center;
 }
-
-.img0 {
-    height: 60vh;
-    width: 100vw;
-}
-
 .img1 {
     background-image: url("../../assets/img/carrossel-01.png");
     height: 60vh;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#aspas{
+  font-size: xx-large;
+  font-weight: 800;
 }
 
 .img2 {
@@ -181,5 +182,15 @@ h2{
   color: black;
   font-style: italic;
 }
+
+.form-control {
+  border: transparent;
+  box-shadow: 3px 3px 3px 0px rgba(105, 105, 105, 0.493);
+  font-style: italic;
+  font-size: small;
+  color: rgba(0, 0, 0, 0.349);
+}
+
+
 
 /*FIM - DEPOIMENTOS*/
