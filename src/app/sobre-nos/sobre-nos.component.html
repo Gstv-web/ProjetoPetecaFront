@@ -2,12 +2,34 @@
   <div class="row navegacao">
     <nav class="d-block m-0 ml-auto">
       <ul class="d-flex justify-content-around align-items-center">
-        <li class="mr-4"><a href="#sobre-nos">Sobre nós</a></li>
-        <li class="mr-4"><a href="#time-area">Nosso time</a></li>
-        <li class="mr-4"><a href="#depoimentos">Depoimentos</a></li>
-        <li class="mr-4"><a routerLink="/informacao">Informativo</a></li>
-        <li class="mr-4"><a routerLink="/entrar">Login</a></li>
-        <li class="mr-4"><a routerLink="/entrar">Cadastro</a></li>
+
+        <li class="mr-4">
+          <a href="#sobre-nos">Sobre nós</a>
+        </li>
+
+        <li class="mr-4">
+          <a href="#time-area">Nosso time</a>
+        </li>
+
+        <li class="mr-4">
+          <a href="#depoimentos">Depoimentos</a>
+        </li>
+
+        <li class="mr-4 dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trabalho Infantil</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown">
+            <a class="dropdown-item" routerLink="/informacao">Linha do tempo</a>
+            <a class="dropdown-item" routerLink="/informacao">Estatística</a>
+          </div>
+        </li>
+        
+        <li class="mr-4">
+          <a routerLink="/entrar">Login</a>
+        </li>
+        
+        <li class="mr-4">
+          <a routerLink="/entrar">Cadastro</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -34,7 +56,9 @@
         ata-slide-to="2"
       ></li>
     </ol>
+
     <div class="carousel-inner">
+      
       <div class="carousel-item active">
         <!-- imagens carrossel -->
         <div class="img1 d-block w-100">
@@ -43,6 +67,7 @@
           </h6>
         </div>
       </div>
+      
       <div class="carousel-item">
         <div class="img2 d-block w-100">
           <h6 class="has-text-align-left" id="texto-carrossel">
@@ -50,6 +75,7 @@
           </h6>
         </div>
       </div>
+
       <div class="carousel-item">
         <div class="img3 d-block w-100">
           <h6 class="has-text-align-left" id="texto-carrossel">a j u d e</h6>
