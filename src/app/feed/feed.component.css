@@ -1,4 +1,18 @@
-.container-fluid {
-    background-color:#F5952C;
-    
+.textoLaranja {
+    color: #F5952C;
+}
+
+.btnLaranja {
+    font-weight: 600;
+    background-color: #F5952C;
+    border: transparent;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+    align-content: center;
+}
+
+pre {
+    font-family: 'Poppins', 'sans-serif';
 }
