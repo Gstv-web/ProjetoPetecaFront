@@ -1,17 +1,18 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row d-flex align-itens-center">
-            <div class="col-md-6 d-flex flex-column align-itens-center justify-content-center text-white">
-                <h2 class="fs-54">Procure aqui por doações ou faça a sua! <span>projeto integrador</span></h2>
-                <h5 class="fs-18">Expresse aqui os seus pensamentos e opniões!</h5>
+            <div class="col-md-6 d-flex flex-column align-itens-center justify-content-center">
+                <h2 class="fs-54 textoLaranja">Procure aqui por doações ou faça a sua! <span>projeto integrador</span></h2>
+                <h5 class="fs-18 textoLaranja">Expresse aqui os seus pensamentos e opniões!</h5>
                 <p>Publique aqui o que você quiser... tmj</p>
 
                 <!--Button's-->
                 <div class="row d-flex justify-content-center md-3 mt-5">
-                    <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">
-            Nova Postagem
-          </button>
-                    <a class="btn btn-outline-light" href="#postagens">Ver Postagem</a>
+                    <button class="btn btnLaranja mr-2 text-white" data-toggle="modal" data-target="#novaPostagem">
+                    Nova Postagem
+                    </button>
+                    
+                    <a class="btn btnLaranja text-white" href="#postagens">Ver Postagem</a>
                 </div>
             </div>
 
@@ -50,7 +51,7 @@
 
             <!--Todas as Postagens-->
 
-            <div class="d-flex flex-column align-items-center mx-auto justify-content-center col-md-9">
+            <div class="postagem d-flex flex-column align-items-center mx-auto justify-content-center col-md-9">
                 <div class="card mb-3" *ngFor="let item of listaPostagens">
                     <div class="card-body">
 
@@ -59,7 +60,7 @@
                             <img src="{{item.user.foto}}" class="rounded-circle w-25" alt="fotoDaEmpresa">
                             <div class="d-flex flex-column ml-5 justify-content-center">
 
-                                <p class="card-text">
+                                <p class="user card-text">
                                     {{ item.user.razaoSocial }}
 
                                 </p>
@@ -74,7 +75,7 @@
                         <!--Titulo, Demanda e Categoria-->
                         <div class='row d-flex col-md-12 justify-content-between mt-5'>
 
-                            <h5 class="card-title">Titulo: {{ item.titulo }}</h5>
+                            <h5 class="card-title">{{ item.titulo }}</h5>
 
                             <small class="ml-3">Demanda: {{item.demanda}}
                                 </small>
@@ -84,14 +85,14 @@
                         </div>
 
                         <!--Descrição-->
-                        <div class="border" style="height: 25vh;">
+                        <div class="textoPost" style="height: 25vh;">
                             <pre>{{ item.descricao }}</pre>
                         </div>
 
                         <!--Localidade e botão-->
                         <p>Localidade: {{item.localidade}}</p>
                         <div class="d-flex row justify-content-end mr-2">
-                            <button type="button" class="btn btn-success">{{ item.demanda == "OFERTA" ? 'Quero ajuda!' : 'Quero ajudar!' }}</button>
+                            <button type="button" class="btn btn-success mr-5">{{ item.demanda == "OFERTA" ? 'Quero ajuda!' : 'Quero ajudar!' }}</button>
                         </div>
 
                     </div>
@@ -108,10 +109,10 @@
 
                         <!--Imagem, Razão Social e Data-->
                         <div class='d-flex col-10 mb-4'>
-                            <img src="{{user.foto}}" class="rounded-circle w-25" alt="fotoDaEmpresa">
+                            <img src="{{user.foto}}" class="rounded-circle w-25 img-fluid" alt="fotoDaEmpresa">
                             <div class="d-flex flex-column ml-5 justify-content-center">
 
-                                <p class="card-text">
+                                <p class="user card-text">
                                     {{ razaoSocial }}
 
                                 </p>
@@ -136,7 +137,8 @@
                         </div>
 
                         <!--Descrição-->
-                        <div class="border" style="height: 25vh;">
+                        <div class="textoPost" style="height: 25vh;">
+                            
                             <pre>{{ item.descricao }}</pre>
                         </div>
 
@@ -183,7 +185,7 @@
                                         <div class="d-flex col-10 mb-4">
                                             <img src="{{postagem.user.foto}}" class="rounded-circle w-25" alt="">
                                             <div class="d-flex flex-column ml-5 justify-content-center">
-                                                <p class="card-text ">
+                                                <p class="user card-text">
                                                     {{postagem.user.razaoSocial}}
                                                 </p>
                                                 <p class="card-text "><small class="text-muted ">
@@ -197,8 +199,8 @@
                                             <small class="ml-3">Demanda:{{postagem.demanda}}</small>
                                             <small class="ml-3">Categoria:{{postagem.tipoPostagem}}</small>
                                         </div>
-                                        <div class="border" style="height: 25vh;">
-                                            <p class="card-text mt-3" >{{postagem.descricao}}</p>
+                                        <div class="textoPost" style="height: 25vh;">
+                                            <pre>{{postagem.descricao}}</pre>
                                         </div>
                                         <p>Localidade:{{postagem.localidade}}</p>
                                         <div class="d-flex row justify-content-end mr-2">
@@ -335,8 +337,8 @@
                         <input class="form-control" type="text" name="localidade" id="localidade" [(ngModel)]="postagemEdit.localidade" />
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                <div class="modal-footer mr-4">
+                    <button type="button" class="btn btn-danger m-4" data-dismiss="modal">
           Cancelar
         </button>
                     <button type="button" class="btn btn-success" (click)="atualizar()" data-dismiss="modal">

@@ -2,12 +2,34 @@
   <div class="row navegacao">
     <nav class="d-block m-0 ml-auto">
       <ul class="d-flex justify-content-around align-items-center">
-        <li class="mr-4"><a href="#sobre-nos">Sobre nós</a></li>
-        <li class="mr-4"><a href="#nosso-time">Nosso time</a></li>
-        <li class="mr-4"><a href="#depoimentos">Depoimentos</a></li>
-        <li class="mr-4"><a routerLink="/informacao">Informativo</a></li>
-        <li class="mr-4"><a routerLink="/entrar">Login</a></li>
-        <li class="mr-4"><a routerLink="/cadastrar">Cadastro</a></li>
+
+        <li class="mr-4">
+          <a href="#sobre-nos">Sobre nós</a>
+        </li>
+
+        <li class="mr-4">
+          <a href="#time-area">Nosso time</a>
+        </li>
+
+        <li class="mr-4">
+          <a href="#depoimentos">Depoimentos</a>
+        </li>
+
+        <li class="mr-4 dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trabalho Infantil</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown">
+            <a class="dropdown-item" routerLink="/informacao">Linha do tempo</a>
+            <a class="dropdown-item" routerLink="/informacao">Estatística</a>
+          </div>
+        </li>
+        
+        <li class="mr-4">
+          <a routerLink="/entrar">Login</a>
+        </li>
+        
+        <li class="mr-4">
+          <a routerLink="/entrar">Cadastro</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -34,7 +56,9 @@
         ata-slide-to="2"
       ></li>
     </ol>
+
     <div class="carousel-inner">
+      
       <div class="carousel-item active">
         <!-- imagens carrossel -->
         <div class="img1 d-block w-100">
@@ -43,6 +67,7 @@
           </h6>
         </div>
       </div>
+      
       <div class="carousel-item">
         <div class="img2 d-block w-100">
           <h6 class="has-text-align-left" id="texto-carrossel">
@@ -50,9 +75,10 @@
           </h6>
         </div>
       </div>
+
       <div class="carousel-item">
         <div class="img3 d-block w-100">
-          <h6 class="has-text-align-left" id="texto-carrossel">a j u de</h6>
+          <h6 class="has-text-align-left" id="texto-carrossel">a j u d e</h6>
         </div>
       </div>
       <!-- fim imagens carrossel -->
@@ -91,10 +117,10 @@
 
   <div class="" id="maozinha">
     <h1 class="d-flex my-4 text">Encontre ou dê uma mãozinha</h1>
-
+    
     <div class="row">
-      <a routerLink="/feed"><button class="rounded-pill text-white" id="botao-laranja">Oferte</button></a>
-      <a routerLink="/feed"><button class="rounded-pill text-white" id="botao-azul">Procure</button></a>
+      <a routerLink="/feed"><button class=" btn rounded-pill text-white botao-laranja">Oferte</button></a>
+      <a routerLink="/feed"><button class="btn rounded-pill text-white botao-azul">Procure</button></a>
     </div>
   </div>
 </div>
@@ -110,42 +136,6 @@
     <h2 class="row d-flex col-10 justify-content-center mt-5" id="titulo">
       nosso time :)
     </h2>
-
-    <div class="d-flex-md-3 col-2 mx-1 my-5">
-      <div class="d-flex justify-content-center mb-4">
-        <img
-          class="col-10 y-2"
-          id="img-element "
-          src="../../assets/img/Karolyne.svg"
-          alt=" "
-        />
-      </div>
-      <h4 class="row justify-content-center text-dark mb-4">Karolyne Corol</h4>
-      <p class="row justify-content-center text-justify" id="descricao-element">
-        Teve a oportunidade de contribuir com kick-off de uma startup como
-        Gerente de Projetos e desde então iniciou estudos em Design, Gestão de
-        Projetos, Metodologias Ágeis e Linguagens de Programação.
-      </p>
-    </div>
-
-    <div class="d-flex-md-3 col-2 mx-1">
-      <div class="d-flex justify-content-center mb-4">
-        <img
-          class="col-10 y-2"
-          id="img-element"
-          src="../../assets/img/Gustavo.svg"
-          alt=" "
-        />
-      </div>
-      <h4 class="row justify-content-center text-dark mb-4">
-        Gustavo Oliveira
-      </h4>
-      <p class="row justify-content-center text-justify" id="descricao-element">
-        Dev Web formado em Gestão de RH. Ajudou na elaboração de uma aplicação
-        onde houve redução no consumo de papel do departamento e estuda
-        linguagem de programação voltado à inteligência artificial.
-      </p>
-    </div>
 
     <div class="d-flex-md-3 col-2 mx-1">
       <div class="d-flex justify-content-center mb-4">
@@ -163,6 +153,42 @@
         Dev Web Front-End e Biomédica especializada em Informática em Saúde pela
         UNIFESP. Atuou com atendimento ao cliente, pesquisa clínica, gestão
         empresarial e implantação de software.
+      </p>
+    </div>
+
+    <div class="d-flex-md-3 col-2 mx-1">
+      <div class="d-flex justify-content-center mb-4">
+        <img
+        class="col-10 y-2"
+        id="img-element"
+        src="../../assets/img/Gustavo.svg"
+          alt=" "
+        />
+      </div>
+      <h4 class="row justify-content-center text-dark mb-4">
+        Gustavo Oliveira
+      </h4>
+      <p class="row justify-content-center text-justify" id="descricao-element">
+        Dev Web formado em Gestão de RH. Ajudou na elaboração de uma aplicação
+        onde houve redução no consumo de papel do departamento e estuda
+        linguagem de programação voltado à inteligência artificial.
+      </p>
+    </div>
+
+    <div class="d-flex-md-3 col-2 mx-1 my-5">
+      <div class="d-flex justify-content-center mb-4">
+        <img
+        class="col-10 y-2"
+          id="img-element "
+          src="../../assets/img/Karolyne.svg"
+          alt=" "
+          />
+        </div>
+        <h4 class="row justify-content-center text-dark mb-4">Karolyne Corol</h4>
+        <p class="row justify-content-center text-justify" id="descricao-element">
+        Teve a oportunidade de contribuir com kick-off de uma startup como
+        Gerente de Projetos e desde então iniciou estudos em Design, Gestão de
+        Projetos, Metodologias Ágeis e Linguagens de Programação.
       </p>
     </div>
 
@@ -194,79 +220,83 @@
 
 <!-- Cards Depoimentos -->
 <div class="row" id="depoimentos"></div>
-<div class="">
-  <nav class="d-flex-md-3">
-    <h2 class="text-center col-12 my-5 w-100">Depoimentos</h2>
+      <h2 class="text-center col-12 my-5 w-100">Depoimentos</h2>
 
-    <div class="row d-flex justify-content-around my-5 mx-2">
-      <div class="d-flex-md-3 col-4">
-        <div class="d-flex justify-content-center mb-4 text-dark">
-          <img
-            class="row col-3"
-            id="img-depoimento"
-            src="..//../assets/img/dep1.png "
-            alt=" "
-          />
+      <div class="col-md-12 d-flex">
+        
+        <!-- Sara Bastos -->
+        <div class="mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <img
+                class="img-fluid rounded float-right"
+                id="img-depoimento"
+                src="..//../assets/img/dep1.png "
+                alt=" "
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <p class="card-text text-justify">O PETECA oportunizou a nossa instituição a viabilidade de um atendimento agilizado, de forma a possibilitar a resolução de problemas que demandam soluções rápidas.</p>
+                <hr class="my-2">
+                <p class="card-text"><small class="text-muted">- Sara Bastos</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4 class="row col-11 justify-content-center mb-3 text-dark">
-          Sara Bastos
-        </h4>
-        <p
-          class="row col-8 justify-content-center text-justify text-dark"
-          id="depoimento-element"
-        >
-          O PETECA oportunizou a nossa instituição a viabilidade de um atendimento agilizado, de forma a possibilitar a resolução de problemas que demandam soluções rápidas.
-        </p>
-      </div>
 
-      <div class="d-flex-md-3 col-4">
-        <div class="d-flex justify-content-center mb-4 text-dark">
-          <img
-            class="col-3"
-            id="img-element"
-            src="..//../assets/img/dep2.png "
-            alt=" "
-          />
+        <!-- Pey Jon Ming -->
+        <div class="mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <img
+              class="img-fluid rounded float-right"
+              id="img-depoimento"
+              src="..//../assets/img/dep2.png "
+              alt=" "
+            />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-black fs-16 mr-1 mt-3"><i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                <p class="card-text text-justify">Responder à demandas da comunidade é um compromisso assumido pela nossa empresa. Sendo assim, por meio do PETECA fomos capazes de devolver ao território onde nos instalamos parte do que produzimos.</p>
+                <hr class="my-2">
+                <p class="card-text"><small class="text-muted">- Pey Jon Ming</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4 class="row col-11 justify-content-center mb-3 text-dark">
-          Pey Jon Ming
-        </h4>
-        <p
-          class="row col-8 justify-content-center text-justify text-dark"
-          id="depoimento-element"
-        >
-          Responder à demandas da comunidade é um compromisso assumido pela nossa empresa. Sendo assim, por meio do PETECA fomos capazes de devolver ao território onde nos instalamos parte do que produzimos.
-        </p>
-      </div>
 
-      <div class="d-flex-md-3 col-4">
-        <div class="d-flex justify-content-center mb-4 text-dark">
-          <img
-            class="col-3"
-            id="img-element "
-            src="..//../assets/img/dep3.png "
-            alt=" "
-          />
+        <!-- Ruth Castro -->
+        <div class="mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <img
+              class="img-fluid rounded float-right"
+              id="img-depoimento"
+              src="..//../assets/img/dep3.png "
+              alt=" "
+            />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-black fs-16 mr-1 mt-3"><i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                <p class="card-text text-justify">Fui usuária do CRAS Capão e senti os efeitos do PETECA na vida de nós moradores da região. Com o PETECA, a Assistente Social conseguiu para nós um contraturno para as crianças e roupas para os homens que moravam no bairro.</p>
+                <hr class="my-2">
+                <p class="card-text"><small class="text-muted">- Ruth Castro</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4 class="row col-11 justify-content-center mb-3 text-dark">
-          Ruth Castro
-        </h4>
-        <p
-          class="row col-8 justify-content-center text-justify text-dark"
-          id="depoimento-element"
-        >
-          Fui usuária do CRAS Capão e senti os efeitos do PETECA na vida de nós moradores da região. Com o PETECA a Assistente Social conseguiu para nós um contraturno para as crianças e roupas para os homens que moravam no bairro.
-        </p>
       </div>
-    </div>
-  </nav>
-</div>
 
 <!--Contato-->
 
 <section class="row contato-area bg-light m-0 py-4 vh-10" id="contato">
   <div class="container">
     <div class="row">
+
       <div class="col-md-5 contato-area-left text-left">
         <h1 style="font-weight: 700">CONTATO</h1>
         <p class="pt-3 pb-3 text-dark text-justify">
@@ -283,9 +313,10 @@
 
       <div class="col-md-7 contato-area-right bg-light">
         <form class="row g-3 p-5 bg-light">
-          <div class="d-flex justify-content-between">
+          <div class="col-md-12 d-flex">
+
             <!--Label do Nome-->
-            <div class="col-md-6 m-0 pr-2">
+            <div class="col-md-6 m-0 pl-0 d-flex align-items-center">
               <label for="Nome"></label>
               <input
                 type="text"
@@ -298,7 +329,7 @@
             </div>
 
             <!--Label de Sobrenome-->
-            <div class="col-md-6 m-0 pl-2">
+            <div class="col-md-6 m-0 pr-0 d-flex align-items-center">
               <label for="Sobrenome"></label>
               <input
                 type="text"
@@ -323,7 +354,7 @@
           </div>
 
           <!--Label de Assunto-->
-          <div class="col-md-12">
+          <div class="col-md-12 d-flex align-items-center">
             <label for="assunto"></label>
             <textarea
               name="assunto"
@@ -340,7 +371,7 @@
 
           <!--Botão de Enviar-->
           <div class="container-fluid d-flex justify-content-end">
-            <button class="btn btn-outline-info rounded-pill px-3 py-1 mt-3">
+            <button class="btn rounded-pill mt-3 botao-laranja text-white">
               Enviar
             </button>
           </div>

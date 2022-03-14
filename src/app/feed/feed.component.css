@@ -1,4 +1,51 @@
-.container-fluid {
-    background-color:#F5952C;
-    
+.textoLaranja {
+    color: #F5952C;
+}
+
+.btnLaranja {
+    font-weight: 600;
+    background-color: #F5952C;
+    border: transparent;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+    align-content: center;
+}
+
+pre {
+    font-family: 'Poppins', 'sans-serif';
+    white-space: pre-wrap;
+    word-break: keep-all;
+    margin-inline-start: 20px;
+    padding-top: 15px;
+}
+
+
+.card {
+    border-radius: 8%;
+    max-width: 100%;
+}
+
+.card-title {
+    font-weight: 600 !important;
+}
+
+.textoPost {
+    background-color: rgba(238, 159, 13, 0.603);
+    border-radius: 5px;
+}
+
+.user {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+}
+
+.modal-content {
+    padding: 0 100px !important;
+    border-radius: 7px;
+    background-color: #BFEEF1 !important;
+    box-shadow: 0 3px 6px 0 #00000029;
+    background-color: #fffdf7bf;
+    border: transparent;
 }

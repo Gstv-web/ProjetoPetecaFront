@@ -7,14 +7,37 @@
     font-family: "Poppins";
     background-color: none;
     margin: auto;
-    padding: 0;
-    color: white;
 }
 
+a {
+  color: white;
+}
+
+/* -------------------------------Dropdown----------------------------------- */
+.dropdown-item{
+  font-family: 'Poppins';
+  font-weight: 600;
+  color:white;
+  background: none;
+}
+
+.dropdown-item:hover{
+  color:black;
+}
+
+.dropdown-menu{
+  background-color: transparent;
+  border-radius: 7px;
+  border: transparent;
+  box-shadow: 3px 3px 3px 0px black;
+}
+
+/* -------------------------------------------------------------------------- */
 
 #navbar {
   font-family: 'Poppins';
   font-weight: 600;
+  color: white;
 }
 
 /* Logo */
@@ -23,21 +46,20 @@
   width: 60%;
 }
 
-#botao-laranja {
+.botao-laranja {
   width: 260px;
   height: 60px;
   border: transparent;
   background-color: #f5952c;
 }
 
-#botao-azul {
+.botao-azul {
   width: 300px;
   height:60px;
   border: transparent;
   background-color: #00C2E0;
 
 }
-
 
 #img-element {
     display: inline-block;

@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { MenuComponent } from './menu/menu.component';
@@ -25,7 +24,6 @@ import { InformacaoComponent } from './informacao/informacao.component';
     MenuComponent,
     EntrarComponent,
     RodapeComponent,
-    CadastrarComponent,
     ContatoComponent,
     SobreNosComponent,
     FeedComponent,

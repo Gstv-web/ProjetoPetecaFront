@@ -1,6 +1,103 @@
-#bg {
+/* ---------------------------------------- Geral ------------------------------------------- */
+
+
+h1{
+  font-weight: 900;
+}
+
+.btnLaranja {
+  font-weight: 600;
+  background-color: #F5952C;
+  border: transparent;
+  width: 200px;
+  height: 45px;
+  border-radius: 30px;
+  border: transparent;
+}
+
+.btnRoxo {
+  box-shadow: #000;
+  font-weight: 600;
+  background-color: #856AB4;
+  width: 200px;
+  height: 45px;
+  border-radius: 30px;
+  border: transparent;
+}
+
+.form-control {
+  border: transparent;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7c2;
+}
+
+placeholder {
+  font-style: italic;
+}
+
+/* ---------------------------------------- Cadastrar ------------------------------------------- */
+.voltarCadastro {
+  position: fixed;
+  left: 10px;
+  top: 15px;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+#cadastrar {
+background-image: url("../../assets/img/bg-cadastrar@2x.png");
+height: 100vh;
+width: 100vw;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border: transparent;
+box-shadow: 0 3px 6px 0 #00000029;
+background-color: #fffdf7bf;
+}
+
+#formCadastrar {
+  padding: 0 70px !important;
+  border-radius: 7px;
+  background-color: #00c2e0;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7bf;
+  border: transparent;
+}
+
+#inputCadastrar {
+border-radius: 35.5px;
+box-shadow: 0 3px 6px 0 #00000029;
+background-color: #fffdf7c2;
+border: transparent;
+font-style: italic;
+font-size: small;
+}
+
+#indicador {
+font-size: 18px;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: left;
+color: #000;
+}
+
+/* --------------------------------------- Entrar -------------------------------------------- */
+.voltarEntrar {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+#entrar {
   background-image: url("../../assets/img/Login@2x.png");
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,40 +107,31 @@
 }
 
 .inicio {
-    position: fixed;
-    top: 25px;
-    right: 100px;
-    color: #F5952C;
-    background: white;
-    border: 1px solid #F5952C;
-    font-weight: bold;
-  }
+  position: fixed;
+  top: 25px;
+  right: 100px;
+  color: #F5952C;
+  background: white;
+  border: 1px solid #F5952C;
+  font-weight: bold;
+}
   
-  .inicio:hover {
-    position: fixed;
-    top: 25px;
-    right: 100px;
-    color: white;
-    background: #F5952C;
-    border: 1px solid white;
-    font-weight: bold;
-  }
+.inicio:hover {
+  position: fixed;
+  top: 25px;
+  right: 100px;
+  color: white;
+  background: #F5952C;
+  border: 1px solid white;
+  font-weight: bold;
+}
 
 #icon {
   border: transparent;
   box-shadow: 0 3px 6px 0 #00000029;
 }
 
-#usuario {
-  border-radius: 35.5px;
-  box-shadow: 0 3px 6px 0 #00000029;
-  background-color: #fffdf7c2;
-  border: transparent;
-  font-style: italic;
-  font-size: small;
-}
-
-#senha {
+#input {
   border-radius: 35.5px;
   box-shadow: 0 3px 6px 0 #00000029;
   background-color: #fffdf7c2;
@@ -53,95 +141,106 @@
 }
 
 .btnEntrar {
-    font-weight: 600;
-    background-color: #F5952C;
-    border: transparent;
-    width: 200px;
-    height: 40px;
-    border-radius: 30px;
-    border: transparent;
-    align-content: center;
+  font-weight: 600;
+  background-color: #F5952C;
+  border: transparent;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: transparent;
+  align-content: center;
 }
 
 .hr1::after {
-    content: "ou";
-    display: inline-block;
-    position: relative;
-    top: -0.9em;
-    padding: 0 0.3em;
-    color: #000;
-    font-weight: 600;
+  content: 'ou';
+  display: inline-block;
+  position: relative;
+  top: -0.9em;
+  padding: 0 0.3em;
+  color: black;
+  font-weight: 600;
 }
 
-h1 {
-  font-weight: 900;
-  text-align: center;
-  color: #000;
+#formEntrar {
+  padding: 0 100px !important;
+  border-radius: 7px;
+  background-color: #00c2e0;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7bf;
+  border: transparent;
 }
 
-#form {
-    padding: 0 70px !important;
-    border-radius: 7px;
-    background-color: #00c2e0;
-    box-shadow: 0 3px 6px 0 #00000029;
-    background-color: white;
-    border: transparent;
-}
+/* ----------------------------------------------------------- Redes Sociais --------------------------------------------------------------- */
 
 .link-midia-social:not(:first-child){
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .facebook {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: #868788;
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #868788;
 }
 
 .facebook:hover {
-    background-color: #4867AA;
-    border: 1px solid #4867AA;
-    color: #ffff;
+  background-color: #4867AA;
+  border: 1px solid #4867AA;
+  color: #ffff;
 }
 
 .google {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: #868788;
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #868788;
 }
 
 .google:hover {
-    background-color: #E94235;
-    border: 1px solid #E94235;
-    color: #ffff;
+  background-color: #E94235;
+  border: 1px solid #E94235;
+  color: #ffff;
 }
 
 .linkedin {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: #868788;
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #868788;
+
 }
 
 .linkedin:hover {
-    background-color: #0A66C2;
-    border: 1px solid #0A66C2;
-    color: #ffff;
+  background-color: #0A66C2;
+  border: 1px solid #0A66C2;
+  color: #ffff;
 }
 
 .lista-midia-social {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+/* --------------------------------------------------------------------------- */
+
+.cadastro {
+  position: absolute;
+  z-index: 2;
+}
+
+.login {
+  position: relative;
+  z-index: -1;
 }
