@@ -43,6 +43,8 @@ export class FeedComponent implements OnInit {
 
   ngOnInit(){
 
+    window.scroll(0,0)
+
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
@@ -107,12 +109,12 @@ export class FeedComponent implements OnInit {
     this.postagemEdit.demanda = this.demanda
     this.postagemEdit.tipoPostagem = this.tipoPost
 
-
     this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
       this.postagemEdit = resp
       alert('Postagem atualizada com sucesso!')
       this.listarPostagens()
-      this.router.navigate(['/feed'])
+      this.findByIdUser()
+      
     })
   }
 
@@ -122,7 +124,8 @@ export class FeedComponent implements OnInit {
     this.postagemService.deletePostagem(this.idPost).subscribe(() => {
       alert ('Postagem apagada com sucesso!')
       this.listarPostagens()
-      this.router.navigate(['/feed'])
+      this.findByIdUser()
+      
     })
   }
 

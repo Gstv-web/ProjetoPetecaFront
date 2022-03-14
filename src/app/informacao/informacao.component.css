@@ -4,10 +4,43 @@
   box-sizing: border-box;
 }
 
+.inicio {
+  position: fixed;
+  top: 25px;
+  left: 100px;
+  color: #F5952C;
+  background: white;
+  border: 1px solid #F5952C;
+  font-weight: bold;
+}
+
+.inicio:hover {
+  position: fixed;
+  top: 25px;
+  left: 100px;
+  color: white;
+  background: #F5952C;
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+.topo {
+  background-color: #00C2E0;
+  height: 250px;
+}
+
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
   background: #ffffff;
+}
+
+#logoPeteca {
+  background-image: url(../../assets/img/logoTrans.png);
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 45%;
 }
 
 .timeline {
@@ -21,8 +54,8 @@ body {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 2px;
-  background: #00C2E0;
+  width: 3px;
+  background: #F5952C;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -37,11 +70,11 @@ body {
 }
 
 .container.left {
-  left: 0;
+  left: -254px;
 }
 
 .container.right {
-  left: 50%;
+  left: 254px;
 }
 
 .container::after {
@@ -51,8 +84,7 @@ body {
   height: 16px;
   top: calc(50% - 8px);
   right: -8px;
-  background: #ffffff;
-  border: 2px solid #00C2E0;
+  border: 2px solid #F5952C;
   border-radius: 16px;
   z-index: 1;
 }
@@ -68,7 +100,7 @@ body {
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #00C2E0;
+  background: #F5952C;
   z-index: 1;
 }
 
@@ -79,11 +111,11 @@ body {
 .container .date {
   position: absolute;
   display: inline-block;
-  top: calc(50% - 8px);
+  top: calc(50% - 15px);
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
-  color: #F5952C;
+  color: #00C2E0;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -104,12 +136,11 @@ body {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-/*   background: #F5952C; */
-  border: 2px solid #00C2E0;
+  border: 2px solid #F5952C;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;
-  color: #00C2E0;
+  color: #F5952C;
   z-index: 1;
 }
 
@@ -135,8 +166,8 @@ body {
 .container .content h2 {
   margin: 0 0 10px 0;
   font-size: 22px;
-  font-weight: normal;
-  color: #F5952C;
+  font-weight: 800;
+  color: #00C2E0;
 }
 
 .container .content p {
