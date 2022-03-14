@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { Credentials } from "../model/Credentials"
+import { Credentials } from "../model/Credentials";
 import { AuthService } from '../service/auth.service';
+import { User } from '../model/User';
 
 
 @Component({
@@ -13,6 +14,9 @@ import { AuthService } from '../service/auth.service';
 export class EntrarComponent implements OnInit {
 
   credentials: Credentials = new Credentials()
+  user: User = new User
+  confirmarSenha: string
+  tipo: string
 
   constructor(
     private auth: AuthService,
@@ -20,9 +24,7 @@ export class EntrarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     window.scroll(0,0)
-
   }
 
   entrar() {
@@ -45,5 +47,26 @@ export class EntrarComponent implements OnInit {
     });
   }
 
+  confirmSenha(event: any) {
+    this.confirmarSenha = event.target.value
+  }
+
+  tipoUser(event: any) {
+    this.tipo = event.target.value
+  }
+
+  cadastrar() {
+    this.user.tipo = this.tipo
+
+    if(this.user.senha != this.confirmarSenha){
+      alert("A senha está incorreta.")
+    } else {
+      this.auth.cadastrar(this.user).subscribe((resp: User) => {
+        this.user = resp
+        alert('Usuário cadastrado com sucesso!')
+        this.router.navigate(["/entrar"])
+      })
+    }
+  }
 
 }
