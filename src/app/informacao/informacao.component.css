@@ -10,11 +10,9 @@
   top: 15px;
   font-weight: bold;
   font-size: 16pt;
+  color: #F5952C !important;
 }
 
-.voltarCadastro:scroll {
-  color: #F5952C;
-}
 
 .topo {
   background-image: url("../../assets/img/carrossel-02.png");
@@ -27,7 +25,7 @@
 .titulo {
   font-size: 80px;
   font-weight:900;
-  color: #f5942c8c;
+  color: #F5952C;
   text-align: center;
 }
 
