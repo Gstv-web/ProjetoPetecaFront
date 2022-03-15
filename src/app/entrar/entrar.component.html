@@ -94,6 +94,8 @@
           Não tem uma conta? 😥
           <a
             onclick="document.getElementById('cadastrar').style.zIndex=2"
+            onclick="document.getElementById('cadastrar').setAttribute('style', 'display:block !important');"
+            onclick="document.getElementById('entrar').setAttribute('style', 'display:none !important');"
             href="#cadastrar"
             >Cadastre-se</a
           >
@@ -256,7 +258,9 @@
           <p class="text-center mt-3">
             Já tem uma conta? 🎉
             <a
-              onclick="document.getElementById('cadastrar').style.zIndex=-1"
+              onclick="document.getElementById('entrar').style.zIndex=2"
+              onclick="document.getElementById('cadastrar').setAttribute('style', 'display:none !important');"
+              onclick="document.getElementById('entrar').setAttribute('style', 'display:block !important');"
               href="#cadastrar"
               >Faça seu login</a
             >
