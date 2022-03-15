@@ -1,5 +1,7 @@
 #navbar {
     background-color: #00c2e0;
+    border: 0 transparent;
+    box-shadow: 0 3px 6px 0 #00000029;
 }
 
 .fs-16 {
@@ -8,4 +10,9 @@
 
 a {
     cursor: pointer;
+}
+
+.icone-menu{
+  color: white !important;
+
 }
