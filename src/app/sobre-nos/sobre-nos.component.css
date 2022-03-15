@@ -16,6 +16,14 @@ a {
   color: white;
 }
 
+.voltarCadastro {
+  position: fixed;
+  left: 10px;
+  top: 15px;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
 /* -------------------------------Dropdown----------------------------------- */
 .dropdown-item{
   font-family: 'Poppins';
@@ -112,6 +120,7 @@ h1 {
   color: #f5942c8c;
   text-align: center;
 }
+
 .img1 {
     background-image: url("../../assets/img/carrossel-01.png");
     height: 60vh;

@@ -243,11 +243,10 @@ color: #000;
 /* --------------------------------------------------------------------------- */
 
 .cadastro {
-  position: absolute;
-  z-index: 2;
+  z-index: -1;
 }
 
 .login {
-  position: relative;
-  z-index: -1;
+  position: absolute;
+  z-index: 2;
 }

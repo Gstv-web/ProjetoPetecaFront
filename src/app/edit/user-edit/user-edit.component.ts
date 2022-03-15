@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/User';
 import { AuthService } from 'src/app/service/auth.service';
-import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -18,7 +17,6 @@ export class UserEditComponent implements OnInit {
   tipo: string
   
   constructor(
-    private postagemService: PostagemService,
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute
@@ -56,6 +54,7 @@ export class UserEditComponent implements OnInit {
     } else {
       this.authService.putUser(this.user).subscribe((resp: User) => {
         this.user = resp;
+        this.authService.refreshToken();
         alert("Usuário atualizado com sucesso!");
         this.router.navigate(["/feed"]);
       });

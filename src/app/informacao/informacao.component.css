@@ -4,29 +4,29 @@
   box-sizing: border-box;
 }
 
-.inicio {
+.voltarCadastro {
   position: fixed;
-  top: 25px;
-  left: 100px;
-  color: #F5952C;
-  background: white;
-  border: 1px solid #F5952C;
+  left: 10px;
+  top: 15px;
   font-weight: bold;
+  font-size: 16pt;
+  color: #F5952C !important;
 }
 
-.inicio:hover {
-  position: fixed;
-  top: 25px;
-  left: 100px;
-  color: white;
-  background: #F5952C;
-  border: 1px solid white;
-  font-weight: bold;
-}
 
 .topo {
-  background-color: #00C2E0;
-  height: 250px;
+  background-image: url("../../assets/img/carrossel-02.png");
+  height: 40vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.titulo {
+  font-size: 80px;
+  font-weight:900;
+  color: #F5952C;
+  text-align: center;
 }
 
 body {
