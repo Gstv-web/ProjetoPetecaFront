@@ -1,22 +1,31 @@
-<!-- Cadastro -->
-<div class="container-fluid cadastro d-flex align-items-center" id="cadastrar">
-
+<body class="h-100 m-0" id="body">
+  <!-- Cadastro -->
+  <div
+    class="container-fluid cadastro d-flex align-items-center w-100 h-100"
+    id="cadastrar"
+  >
     <div class="col-md-12 d-flex justify-content-center">
+      <p class="voltarCadastro py-2 px-3">
+        <a class="text-white" routerLink="/sobre-nos">
+          <i
+            class="editIcon fa fa-arrow-left text-white"
+            aria-hidden="true"
+          ></i>
+          Início</a
+        >
+      </p>
 
-        <p class="voltarCadastro py-2 px-3">
-            <a class="text-white" routerLink="/sobre-nos"> <i class="editIcon fa fa-arrow-left text-white" aria-hidden="true"></i> Início</a>
-        </p>
-
-      <div id="formCadastrar" class="col-md-5 mt-5 d-flex justify-content-center">
-
+      <div
+        id="formCadastrar"
+        class="col-md-5 mt-5 d-flex justify-content-center"
+      >
         <div class="col-md-10">
-
           <h1 class="text-center mt-3 mb-4 text-black">Cadastro</h1>
-  
+
           <div class="form-group">
             <p class="col-md-6 mb-1 mt-3" id="indicador">Razão Social</p>
             <input
-            [(ngModel)]="user.razaoSocial"
+              [(ngModel)]="user.razaoSocial"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="text"
@@ -25,11 +34,11 @@
               placeholder="razão social"
             />
           </div>
-  
+
           <div class="form-group">
             <p class="col-md-6 mb-1 mt-3" id="indicador">Email</p>
             <input
-            [(ngModel)]="user.email"
+              [(ngModel)]="user.email"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="text"
@@ -38,11 +47,11 @@
               placeholder="email (email@email.com)"
             />
           </div>
-  
+
           <div class="form-group">
             <p class="col-md-6 mb-1 mt-3" id="indicador">Foto</p>
             <input
-            [(ngModel)]="user.foto"
+              [(ngModel)]="user.foto"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="text"
@@ -51,11 +60,11 @@
               placeholder="coloque um link para sua foto"
             />
           </div>
-  
+
           <div class="form-group">
             <p class="col-md-6 mb-1 mt-3" id="indicador">Senha</p>
             <input
-            (input)="confirmSenha($event)"
+              (input)="confirmSenha($event)"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="password"
@@ -64,10 +73,10 @@
               placeholder="senha"
             />
           </div>
-  
+
           <div class="form-group">
             <input
-            [(ngModel)]="user.senha"
+              [(ngModel)]="user.senha"
               class="form-control rounded-pill mt-2"
               id="inputCadastrar"
               type="password"
@@ -76,12 +85,12 @@
               placeholder="confirme sua senha"
             />
           </div>
-  
+
           <div class="form-group">
             <!-- <label for="contato">Contato:</label> -->
             <p class="col-md-6 mb-1 mt-3" id="indicador">Telefone</p>
             <input
-            [(ngModel)]="user.contato"
+              [(ngModel)]="user.contato"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="text"
@@ -90,12 +99,12 @@
               placeholder="informe seu telefone"
             />
           </div>
-  
+
           <div class="form-group">
             <!-- <label for="confSenha">Endereço:</label> -->
             <p class="col-md-6 mb-1 mt-3" id="indicador">Região</p>
             <input
-            [(ngModel)]="user.endereco"
+              [(ngModel)]="user.endereco"
               class="form-control rounded-pill"
               id="inputCadastrar"
               type="text"
@@ -104,17 +113,17 @@
               placeholder="localidade"
             />
           </div>
-  
+
           <div class="form-group">
             <!-- <label for="tipo">Tipo de Usuário:</label> -->
-            <p class="col-md-6 mb-1 mt-3" id="indicador">Tipo de usuário</p>
+            <p class="col-md-8 mb-1 mt-3" id="indicador">Tipo de usuário</p>
             <select
               class="form-control rounded-pill"
               name="tipo"
               id="tipo"
               (change)="tipoUser($event)"
             >
-              <option value="">selecione um tipo de Usuário</option>
+              <option value="">selecione um tipo de usuário</option>
               <option value="ONG">Órgão não governamental (ONG)</option>
               <option value="EMPRESA">Empresa</option>
               <option value="ORGGOVERNAMENTAL">Orgão Governamental</option>
@@ -122,7 +131,6 @@
           </div>
 
           <div class="d-flex justify-content-center my-4">
-
             <button
               type="submit"
               class="form-control-btn btnRoxo mr-5 rounded-pill text-white"
@@ -133,104 +141,129 @@
 
             <button
               type="submit"
-              class="form-control-btn btnLaranja rounded-pill text-white" (click)="cadastrar()">
+              class="form-control-btn btnLaranja rounded-pill text-white"
+              (click)="cadastrar()"
+            >
               Cadastrar
             </button>
-
           </div>
 
           <p class="text-center mt-3">
-            Já tem uma conta? 🎉 <a onclick="document.getElementById('entrar').style.zIndex=2" href="#entrar">Faça seu login</a>
-         </p>
-
+            Já tem uma conta? 🎉
+            <a
+              onclick="document.getElementById('entrar').style.zIndex=2"
+              href="#entrar"
+              >Faça seu login</a
+            >
+          </p>
         </div>
-
       </div>
 
       <div class="col-md-6"></div>
-
     </div>
-</div>
-
+  </div>
 
   <!-- ------------------------------------------------------------------------------------- -->
-  
-<!-- Entrar -->
-<div id="entrar" class="container-fluid login justify-content-center d-flex align-items-center">
 
-    <div class="col-md-12 d-flex justify-content-center align-items-center vw-100 vh-100">
+  <!-- Entrar -->
+  <div
+    id="entrar"
+    class="container-fluid login justify-content-center d-flex align-items-centerover"
+  >
+    <div
+      class="col-md-12 d-flex justify-content-center align-items-center vw-100 vh-100"
+    >
+      <p class="voltarEntrar py-2 px-3">
+        <a class="text-white" routerLink="/sobre-nos"
+          ><i
+            class="editIcon fa fa-arrow-left text-white"
+            aria-hidden="true"
+          ></i>
+          Início</a
+        >
+      </p>
 
-        <p class="voltarEntrar py-2 px-3">
-            <a class="text-white" routerLink="/sobre-nos"><i class="editIcon fa fa-arrow-left text-white" aria-hidden="true"></i> Início</a>
+      <div class="col-md-6"></div>
+
+      <div id="formEntrar" class="col-md-4 mt-5">
+        <h1 class="text-center mt-5">Login</h1>
+
+        <div class="row my-4 justify-content-center">
+          <!-- facebook -->
+          <div class="col-md-12 d-flex justify-content-center">
+            <ul class="lista-midia-social">
+              <a class="link-midia-social" href="#">
+                <li class="facebook" id="icon">
+                  <i class="fa fa-facebook-f"></i>
+                </li>
+              </a>
+
+              <!-- google -->
+              <a class="link-midia-social" href="#">
+                <li class="google" id="icon">
+                  <i class="fa fa-google"></i>
+                </li>
+              </a>
+
+              <!-- linkedin -->
+              <a class="link-midia-social" href="#">
+                <li class="linkedin" id="icon">
+                  <i class="fa fa-linkedin"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="hr1 text-center mt-2" />
+
+        <div class="form-group" id="input">
+          <input
+            [(ngModel)]="credentials.email"
+            class="form-control rounded-pill mb-3"
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="email"
+          />
+        </div>
+
+        <div class="form-group" id="input">
+          <input
+            [(ngModel)]="credentials.senha"
+            class="form-control rounded-pill"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="senha"
+          />
+        </div>
+
+        <div class="form-group justify-content-center row d-flex m-0 p-4">
+          <button
+            type="submit"
+            class="form-control-btn btnLaranja rounded-pill text-white"
+            (click)="entrar()"
+          >
+            Entrar
+          </button>
+        </div>
+
+        <p class="row justify-content-center">
+          Esqueceu sua senha? <a class="ml-1" href=""> Clique aqui!</a>
         </p>
 
-        <div class="col-md-6"></div>
+        <div class="row my-5"></div>
 
-        <div id="formEntrar" class="col-md-4 mt-5">
-            <h1 class="text-center mt-5">Login</h1>
-
-            <div class="row my-4 justify-content-center" >
-              <!-- facebook -->
-                <div class="col-md-12 d-flex justify-content-center">
-                    <ul class="lista-midia-social">
-                        <a class="link-midia-social" href="#">
-                            <li class="facebook" id="icon">
-                                <i class="fa fa-facebook-f"></i>
-                            </li>
-                        </a>
-
-
-                        <!-- google -->
-                        <a class="link-midia-social" href="#">
-                            <li class="google" id="icon">
-                                <i class="fa fa-google"></i>
-                            </li>
-                        </a>
-
-
-                        <!-- linkedin -->
-                        <a class="link-midia-social" href="#">
-                            <li class="linkedin" id="icon">
-                                <i class="fa fa-linkedin"></i>
-                            </li>
-                        </a>
-
-                    </ul>
-
-                </div>
-            </div>
-
-            <hr class="hr1 text-center mt-2">
-
-            <div class="form-group" id="input">
-                <input [(ngModel)]="credentials.email" class="form-control rounded-pill mb-3" type="text" name="usuario" id="usuario" placeholder="email">
-            </div>
-
-            <div class="form-group" id="input">
-                <input [(ngModel)]="credentials.senha" class="form-control rounded-pill" type="password" name="senha" id="senha" placeholder="senha">
-            </div>
-
-            <div class="form-group justify-content-center row d-flex m-0 p-4">
-
-                <button
-                type="submit"
-                class="form-control-btn btnLaranja rounded-pill text-white"
-                (click)="entrar()">
-                Entrar
-              </button>
-
-            </div>
-
-            <p class="row justify-content-center">
-                Esqueceu sua senha? <a class="ml-1" href=""> Clique aqui!</a>
-            </p>
-
-            <div class="row my-5"></div>
-
-            <p class="text-center m-4">
-                Não tem uma conta? 😥 <a onclick="document.getElementById('entrar').style.zIndex=-1" href="#cadastrar">Cadastre-se</a>
-            </p>
-
-        </div>
+        <p class="text-center m-4">
+          Não tem uma conta? 😥
+          <a
+            onclick="document.getElementById('entrar').style.zIndex=-1"
+            href="#cadastrar"
+            >Cadastre-se</a
+          >
+        </p>
+      </div>
     </div>
-</div>
+  </div>
+</body>

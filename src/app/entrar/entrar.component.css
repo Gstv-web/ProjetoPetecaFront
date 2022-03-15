@@ -1,5 +1,12 @@
 /* ---------------------------------------- Geral ------------------------------------------- */
 
+#cadastrar {
+  scrollbar-width: none;
+  background-color: #bbb;
+  width: 500px;
+  height: 600px;
+  overflow-y: scroll;
+}
 
 h1{
   font-weight: 900;
@@ -115,7 +122,7 @@ color: #000;
   border: 1px solid #F5952C;
   font-weight: bold;
 }
-  
+
 .inicio:hover {
   position: fixed;
   top: 25px;

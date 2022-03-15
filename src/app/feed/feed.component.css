@@ -2,15 +2,17 @@
     color: #F5952C;
 }
 
-.btnLaranja {
+.btnLaranja{
     font-weight: 600;
     background-color: #F5952C;
     border: transparent;
     width: 200px;
     height: 40px;
-    border-radius: 30px;
+    border-radius: 1%;
     border: transparent;
     align-content: center;
+    border: 0 none;
+  box-shadow: 0 3px 6px 0 #00000029;
 }
 
 pre {
@@ -23,8 +25,10 @@ pre {
 
 
 .card {
-    border-radius: 8%;
+    border-radius: 1%;
     max-width: 100%;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(105, 105, 105, 0.342);
 }
 
 .card-title {
@@ -32,20 +36,88 @@ pre {
 }
 
 .textoPost {
-    background-color: rgba(238, 159, 13, 0.603);
-    border-radius: 5px;
+    background-color: #00c2e017;
+    box-shadow: 2px 2px 2px 2px rgba(105, 105, 105, 0.342);
+    border-radius: 1%;
+    padding: 1%;
+}
+
+p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-style: italic;
+  font-size: small;
 }
 
 .user {
     font-size: 22px !important;
     font-weight: 600 !important;
+    font: 600;
+    font-style: normal;
 }
 
 .modal-content {
     padding: 0 100px !important;
+    border-radius: 1%;
     border-radius: 7px;
-    background-color: #BFEEF1 !important;
-    box-shadow: 0 3px 6px 0 #00000029;
     background-color: #fffdf7bf;
+    border: 0 none;
+    box-shadow: 0 3px 6px 0 #00000029;
     border: transparent;
+    text-align: left;
+}
+
+#botao-sucesso {
+  background-color: #00C2E0;
+  box-shadow: 0 3px 6px 0 #00000029;
+  font-weight: 900;
+  border: 0 none;
+}
+
+
+#nav-tab {
+  font-weight: 900;
+  border: transparent;
+}
+
+#botao-editar-postagem{
+  box-shadow: 0 3px 6px 0 #00000029;
+  font-weight: 900;
+}
+
+
+#botao-deletar-postagem, #botao-cancelar-edicao, #botao-deletar {
+  box-shadow: 0 3px 6px 0 #00000029;
+  font-weight: 900;
+}
+
+#tipo {
+  border-radius: 2%;
+  box-shadow: 0 3px 6px 0 #00000029;
+  font-weight: 400;
+}
+
+#selecione-cat {
+  box-shadow: 0 3px 6px 0 #00000029;
+  font-weight: 400;
+  border: 0 none;
+    outline: 0;
+}
+
+/* EDITAR POSTAGEM */
+
+#editarPostagem {
+  border-radius: 7px;
+  background-color: #fffdf7bf;
+  border: 0 none;
+  box-shadow: 0 3px 6px 0 #00000029;
+}
+
+#botao-atualizar-postagem {
+  box-shadow: 0 3px 6px 0 #00000029;
+}
+
+.modal-title {
+  font-weight: 900;
+  color: black;
 }
