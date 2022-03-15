@@ -34,6 +34,8 @@ export class FeedComponent implements OnInit {
   selectPost: string
   fotoUser: string
 
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
