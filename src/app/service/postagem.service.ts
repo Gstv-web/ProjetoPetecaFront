@@ -22,7 +22,7 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://peteca.herokuapp.com/postagem/all', this.token)
+    return this.http.get<Postagem[]>('https://peteca.herokuapp.com/postagem/all')
   }
 
   getByIdPostagem(id: number){
