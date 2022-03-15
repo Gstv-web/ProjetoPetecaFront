@@ -1,69 +1,61 @@
-<div class="container" id="corpo">
+<section class="container-fluid">
 
-    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
 
-        <div class="col-md-12">
 
-            <h1 class="text-center text-secondary">Editar Perfil</h1>
-
-        </div>
-
-    </div>
-
-    <div class="row d-flex justify-content-center mt-5">
-
-        <div class="col-md-7">
-
-            <form>
-
+    <div class="col-md-12 d-flex justify-content-around">
+      <div class="col-md-6"></div>
+        <div class="col-md-5">
+            <form class="border-transparent" id="form">
+              <h1 class="text-center">Editar Perfil</h1>
                 <div class="form-group">
-                    <label for="nome">Razão Social:</label>
+                    <label for="nome" id="recebe-dado">Razão Social</label>
                     <input [(ngModel)]="user.razaoSocial" class="form-control rounded-pill" type="text" name="nome"
                         id="nome" placeholder="Razão Social">
                 </div>
 
                 <div class="form-group">
-                    <label for="usuario">Usuario:</label>
+                    <label for="usuario" id="recebe-dado">Usuario</label>
                     <input [(ngModel)]="user.email" class="form-control rounded-pill" type="text" name="usuario"
                         id="usuario" placeholder="E-mail (email@email.com)">
                 </div>
 
                 <div class="form-group">
-                    <label for="foto">Foto:</label>
+                    <label for="foto" id="recebe-dado">Foto</label>
                     <input [(ngModel)]="user.foto" class="form-control rounded-pill" type="text" name="foto" id="foto"
                         placeholder="Coloque um link para sua foto">
                 </div>
 
                 <div class="form-group">
-                    <label for="senha">Senha:</label>
+                    <label for="senha" id="recebe-dado">Senha</label>
                     <input (input)="confirmPassword($event)" class="form-control rounded-pill" type="password" name="senha"
                         id="senha" placeholder="Senha">
                 </div>
 
                 <div class="form-group">
-                    <label for="confSenha">Confirmar Senha:</label>
+                    <label for="confSenha" id="recebe-dado">Confirmar Senha</label>
                     <input [(ngModel)]="user.senha" class="form-control rounded-pill" type="password" name="confSenha"
                         id="confSenha" placeholder="Confirme sua Senha">
                 </div>
 
 
                 <div class="form-group">
-                    <label for="contato">Telefone:</label>
+                    <label for="contato" id="recebe-dado">Telefone</label>
                     <input [(ngModel)]='user.contato' class="form-control rounded-pill" type="text" name="contato"
                         id="contato" placeholder="Contato">
                 </div>
 
 
                 <div class="form-group">
-                    <label for="confSenha">Localização:</label>
+                    <label for="confSenha" id="recebe-dado">Localização</label>
                     <input class="form-control rounded-pill" [(ngModel)]='user.endereco' type="text" name="endereco"
                         id="endereco" placeholder="Endereço">
                 </div>
 
                 <div class="w-50 mx-auto mt-4 d-flex justify-content-around">
 
-                    <button class="btn btn-outline-danger mr-3" routerLink="/feed">Cancelar</button>
-                    <button class="btn btn-outline-success" (click)="edit()">Atualizar</button>
+                    <button class="btn btn-outline-danger mr-3 rounded-pill" id="botao-cancelar" routerLink="/feed">Cancelar</button>
+                    <button class="btn btn-outline-success rounded-pill" id="botao-atualizar" (click)="edit()">Atualizar</button>
 
                 </div>
 
@@ -72,5 +64,8 @@
         </div>
 
     </div>
+  </div>
 
-</div>
+
+
+</section>
