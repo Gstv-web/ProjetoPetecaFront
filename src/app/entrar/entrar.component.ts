@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Credentials } from "../model/Credentials";
 import { AuthService } from '../service/auth.service';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class EntrarComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -63,7 +65,7 @@ export class EntrarComponent implements OnInit {
     } else {
       this.auth.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
-        alert('Usuário cadastrado com sucesso!')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!')
         this.router.navigate(["/entrar"])
       })
     }
