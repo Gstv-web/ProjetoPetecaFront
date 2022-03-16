@@ -1,0 +1,93 @@
+/* ---------------------------------------- Geral ------------------------------------------- */
+
+#cadastrar {
+    scrollbar-width: none;
+    background-color: #bbb;
+    width: 500px;
+    height: 600px;
+    overflow-y: scroll;
+  }
+  
+  h1{
+    font-weight: 900;
+  }
+  
+  .btnLaranja {
+    font-weight: 600;
+    background-color: #F5952C;
+    border: transparent;
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    border: transparent;
+  }
+  
+  .btnRoxo {
+    box-shadow: #000;
+    font-weight: 600;
+    background-color: #856AB4;
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    border: transparent;
+  }
+  
+  .form-control {
+    border: transparent;
+    box-shadow: 0 3px 6px 0 #00000029;
+    background-color: #fffdf7c2;
+  }
+  
+  placeholder {
+    font-style: italic;
+  }
+
+  /* ---------------------------------------- Cadastrar ------------------------------------------- */
+.voltarCadastro {
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+  
+  #cadastrar {
+  background-image: url("../../assets/img/bg-cadastrar@2x.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: transparent;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7bf;
+  }
+  
+  #formCadastrar {
+    padding: 0 70px !important;
+    border-radius: 7px;
+    background-color: #00c2e0;
+    box-shadow: 0 3px 6px 0 #00000029;
+    background-color: #fffdf7bf;
+    border: transparent;
+  }
+  
+  #inputCadastrar {
+  border-radius: 35.5px;
+  box-shadow: 0 3px 6px 0 #00000029;
+  background-color: #fffdf7c2;
+  border: transparent;
+  font-style: italic;
+  font-size: small;
+  }
+  
+  #indicador {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  }
