@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -41,7 +42,7 @@ export class FeedComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private authService: AuthService,
-    private alertas: Alertas
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
