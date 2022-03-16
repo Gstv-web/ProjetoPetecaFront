@@ -126,9 +126,16 @@
             <div class="row d-flex col-md-12 justify-content-between align-items-center mt-5">
               <h5 class="card-title">{{ item.titulo }}</h5>
 
-              <small class="ml-3 d-flex align-items-center justify-content-end">Demanda: {{ item.demanda }} </small>
+              <small class="ml-3 d-flex align-items-center justify-content-end" *ngIf="item.demanda == 'OFERTA'; else elseBlock">Demanda: Oferta </small>
+              <ng-template #elseBlock><small>Demanda: Procura </small></ng-template>
 
-              <small class="ml-3">Categoria: {{ item.tipoPostagem }} </small>
+              <small class="ml-3" *ngIf="item.tipoPostagem == 'DOACAODEROUPA'">Categoria: Doação de roupas </small>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'DOACAODEALIMENTOS'">Categoria: Doação de alimentos </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACURSOLIVRE'">Categoria: Vaga curso civre </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACURSOPROFISSIONALIZANTE'">Categoria: Vaga curso profissionalizante </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACONTRATURNO'">Categoria: Vaga contraturno/SCFV </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGAOFICINAS'">Categoria: Vaga oficinas </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGASOCIAL'">Categoria: Vaga social </small></ng-container>
             </div>
 
             <!--Descrição-->
@@ -194,9 +201,16 @@
             <div class="row d-flex col-md-12 justify-content-between mt-5">
               <h5 class="card-title">Titulo: {{ item.titulo }}</h5>
 
-              <small class="ml-3">Demanda: {{ item.demanda }} </small>
+              <small class="ml-3 d-flex align-items-center justify-content-end" *ngIf="item.demanda == 'OFERTA'; else elseBlock">Demanda: Oferta </small>
+              <ng-template #elseBlock><small>Demanda: Procura </small></ng-template>
 
-              <small class="ml-3">Categoria: {{ item.tipoPostagem }} </small>
+              <small class="ml-3" *ngIf="item.tipoPostagem == 'DOACAODEROUPA'">Categoria: Doação de roupas </small>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'DOACAODEALIMENTOS'">Categoria: Doação de alimentos </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACURSOLIVRE'">Categoria: Vaga curso civre </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACURSOPROFISSIONALIZANTE'">Categoria: Vaga curso profissionalizante </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGACONTRATURNO'">Categoria: Vaga contraturno/SCFV </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGAOFICINAS'">Categoria: Vaga oficinas </small></ng-container>
+              <ng-container><small class="ml-3" *ngIf="item.tipoPostagem == 'VAGASOCIAL'">Categoria: Vaga social </small></ng-container>
             </div>
 
             <!--Descrição-->
@@ -595,12 +609,19 @@
 
         <div class="form-group rounded-pill">
           <label for="demanda">Demanda:</label>
-          <p>{{ postagem.demanda }}</p>
+          <p *ngIf="postagem.demanda == 'OFERTA'; else elseBlock">Oferta</p>
+          <ng-template #elseBlock><p>Procura </p></ng-template>
         </div>
 
         <div class="form-group rounded-pill">
-          <label for="categoria">Categoria</label>
-          <p>{{ postagem.tipoPostagem }}</p>
+          <label for="categoria" >Categoria</label>
+          <p *ngIf="postagem.tipoPostagem == 'DOACAODEROUPA'">Doação de roupas</p>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'DOACAODEALIMENTOS'">Doação de alimentos</p></ng-container>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'VAGACURSOLIVRE'">Vaga curso livre</p></ng-container>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'VAGACURSOPROFISSIONALIZANTE'">Vaga curso profissionalizante</p></ng-container>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'VAGACONTRATURNO'">Vaga contraturno/SCFV</p></ng-container>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'VAGAOFICINAS'">Vaga oficinas</p></ng-container>
+          <ng-container><p *ngIf="postagem.tipoPostagem == 'VAGAOSOCIAL'">Vaga social</p></ng-container>
         </div>
 
         <div class="form-group rounded-pill">
