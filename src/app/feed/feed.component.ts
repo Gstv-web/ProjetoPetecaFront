@@ -40,7 +40,8 @@ export class FeedComponent implements OnInit {
   constructor(
     private router: Router,
     private postagemService: PostagemService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: Alertas
   ) { }
 
   ngOnInit(){
@@ -101,7 +102,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
       this.postagem = resp;
-      alert('Postagem efetuada')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.listarPostagens()
     })
@@ -113,7 +114,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.putPostagem(this.postagemEdit).subscribe((resp: Postagem) => {
       this.postagemEdit = resp
-      alert('Postagem atualizada com sucesso!')
+      this.alertas.showAlertInfo('Postagem atualizada com sucesso!')
       this.listarPostagens()
       this.findByIdUser()
       
@@ -124,7 +125,7 @@ export class FeedComponent implements OnInit {
     this.idPost = this.postagemDelete.id
     console.log(this.idPost)
     this.postagemService.deletePostagem(this.idPost).subscribe(() => {
-      alert ('Postagem apagada com sucesso!')
+      this.alertas.showAlertWarning('Postagem apagada com sucesso!')
       this.listarPostagens()
       this.findByIdUser()
       
