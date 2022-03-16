@@ -62,7 +62,6 @@ a {
   font-weight: 900;
   color: white;
   border: none;
-
   width: 260px;
   height: 60px;
   border: transparent;
@@ -74,8 +73,7 @@ a {
   font-weight: 900;
   color: white;
   border: none;
-
-  width: 300px;
+  width: 260px;
   height:60px;
   border: transparent;
   background-color: #00C2E0;

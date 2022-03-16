@@ -2,6 +2,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   //Rotas
 
   {path:'entrar', component: EntrarComponent},
+  {path:'cadastrar', component: CadastrarComponent},
   {path:'contato',component: ContatoComponent},
   {path:'sobre-nos', component: SobreNosComponent},
   {path:'feed', component: FeedComponent},
