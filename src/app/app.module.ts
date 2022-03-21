@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContatoComponent } from './contato/contato.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
@@ -26,6 +27,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     AppComponent,
     MenuComponent,
     EntrarComponent,
+    CadastrarComponent,
     RodapeComponent,
     ContatoComponent,
     SobreNosComponent,
